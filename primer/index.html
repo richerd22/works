@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The History of City Infrastructure: Aqueducts to Smart Cities | How a City Works</title>
+<meta name="description" content="Every system in a modern city began as an answer to a specific problem: too little clean water, too much waste, fire, darkness, distance, traffic...">
+<link rel="canonical" href="https://works.cold.fyi/primer/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b6b3a">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="The History of City Infrastructure: Aqueducts to Smart Cities | How a City Works"><meta property="og:description" content="Every system in a modern city began as an answer to a specific problem: too little clean water, too much waste, fire, darkness, distance, traffic...">
+<meta property="og:url" content="https://works.cold.fyi/primer/"><meta property="og:image" content="https://works.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/overpass-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "The History of City Infrastructure: Aqueducts to Smart Cities", "description": "Every system in a modern city began as an answer to a specific problem: too little clean water, too much waste, fire, darkness, distance, traffic...", "url": "https://works.cold.fyi/primer/", "image": "https://works.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "How a City Works", "url": "https://works.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "How a City Works", "item": "https://works.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "How cities came to need infrastructure", "item": "https://works.cold.fyi/primer/"}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/overpass-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/overpass-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a public-works field manual - highway guide-sign hero, Overpass (a Highway Gothic descendant) for display, APWA utility-locate colors as section colors, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:light;
+  --bg:#f4f2ec; --panel:#fffdf8; --panel2:#f1eee6; --ink:#17191b; --muted:#5a5a55; --line:#d8d3c7;
+  --tape:#b8480c; --tape-ink:#ffffff; --ink-on:#ffffff; --ink-on-y:#17191b; --hot:#c0281b; --cue:#0a5fb4; --sign:#0b6b3a; --sign-ink:#ffffff;
+  --u-red:#c8261c; --u-yel:#e9b10f; --u-org:#e76a12; --u-blu:#1b63c6; --u-grn:#23884a; --u-pur:#7d45bf; --u-pnk:#d94b8c; --u-wht:#8a877f;
+  --s1:var(--u-blu); --s2:var(--u-grn); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pur);
+  --f-display:"Overpass","Highway Gothic","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-display);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- works.cold.fyi overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:-.01em}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{background:var(--sign);color:var(--sign-ink);border-radius:14px;padding:1.1rem 1.4rem 1.2rem;box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 6px #fff;position:relative;margin:.6rem 0 1.2rem;max-width:44rem}
+.sign .shield{position:absolute;right:1.1rem;top:1rem;font:800 .8rem var(--f-display);background:#fff;color:var(--sign);border-radius:6px;padding:.2rem .45rem;letter-spacing:.04em}
+.sign h1{color:#fff;font-weight:800;font-size:clamp(3rem,11vw,6.6rem);line-height:.9;margin:.2rem 0 .2rem}
+.sign h1 .file{color:#fff}
+.sign .exit{font:700 .9rem var(--f-display);letter-spacing:.02em;opacity:.92;display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.sign .exit b{background:#fff;color:var(--sign);border-radius:4px;padding:.05rem .4rem}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:.95rem;transform:none;clip-path:none;border-radius:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.45rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-blu)}.labels li:nth-child(2){--lc:var(--u-red)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-grn)}.labels li:nth-child(5){--lc:var(--u-pur)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.15rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-display);font-weight:800;font-size:.38em;transform:none;clip-path:none;border-radius:5px;color:var(--sci,#fff);background:var(--sc,var(--tape));padding:.22em .45em .12em;vertical-align:.55em}
+.chip-n{color:var(--sci,#fff);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3{font-weight:800}
+.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--sign);color:#fff}
+.seg button[aria-pressed="true"]{color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"],:root[data-theme="dark"] .btn{color:#141617}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"],:root:not([data-theme="light"]) .btn{color:#141617}}
+.gl-list .cat{color:#fff}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .t.wh{fill:#fff}
+.dg .earth{fill:var(--panel2)}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.key{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin:.6rem 0 0;font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.key i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-primer">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">How a City Works</a> / How cities came to need infrastructure</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">How a City Works</a></h2><a href="/primer/" class=on aria-current=page><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/"><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/"><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/"><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 01 of 25 · about 19 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-wht);--sci:var(--ink-on-y)"><h1 class="sec-h1" id="sec-primer" style="--sc:var(--u-wht);--sci:var(--ink-on-y)"><span class="tape">01</span>How cities came to need infrastructure</h1>
+<p class="short"><strong>The short version:</strong> Every system in a modern city began as an answer to a specific problem: too little clean water, too much waste, fire, darkness, distance, traffic, pollution, and now rising seas. The answers piled up in layers over about 5,000 years, from brick drains in the Indus Valley to court-ordered sewage plants and flood barriers. Most of the pipes, wires and rules under a city street today date from the 1850s onward, and most were built after something went visibly wrong. Boston, the worked example in this guide, shows up at almost every step.</p>
+<h3>What did the first cities build?</h3>
+<p>Cities and infrastructure grew up together. Uruk, in southern Mesopotamia (present-day Iraq), had up to 50,000 residents at its peak around 3100 BC, with another 80,000 to 90,000 people in the surrounding area, which probably made it the largest urban area in the world at the time.<sup id="fnref-4"><a class="footnote-ref" href="#fn-4">4</a></sup> The earliest known examples of writing come from its Eanna district.<sup id="fnref2-4"><a class="footnote-ref" href="#fn-4">4</a></sup> Around 3000 BC, Uruk built a city wall about 9 km (5.6 miles) long.<sup id="fnref3-4"><a class="footnote-ref" href="#fn-4">4</a></sup></p>
+<p>The clearest early evidence of urban plumbing comes from the Indus Valley. Mohenjo-daro, in present-day Pakistan, was built in the 3rd millennium BC and flourished between about 2500 and 1500 BC.<sup id="fnref-5"><a class="footnote-ref" href="#fn-5">5</a></sup> Its streets cross at right angles, with a citadel to the west and a lower town to the east, and it had what UNESCO calls "an elaborate drainage system," along with wells and soak pits for sewage.<sup id="fnref2-5"><a class="footnote-ref" href="#fn-5">5</a></sup></p>
+<p>The street drains were built of baked brick set in mud mortar and covered with flat bricks or limestone blocks.<sup id="fnref-6"><a class="footnote-ref" href="#fn-6">6</a></sup> Vertical pipes inside house walls carried wastewater down to chutes that emptied into the street drains, and settling pools along the way caught sediment and were cleaned out from time to time.<sup id="fnref2-6"><a class="footnote-ref" href="#fn-6">6</a></sup> Mohenjo-daro became a UNESCO World Heritage Site in 1980.<sup id="fnref3-5"><a class="footnote-ref" href="#fn-5">5</a></sup></p>
+<p>Rome added water at a scale no earlier city had managed. Its great drain, the <strong>Cloaca Maxima</strong>, is traditionally dated to about 600 BC and credited to King Tarquinius Priscus.<sup id="fnref-7"><a class="footnote-ref" href="#fn-7">7</a></sup> It was built to drain marshes and carry away waste, began as an open channel, and was covered over gradually; parts of it still carry rainwater in central Rome today.<sup id="fnref2-7"><a class="footnote-ref" href="#fn-7">7</a></sup> Rome's first <strong>aqueduct</strong>, a channel that carries water by gravity from a distant source, was the Aqua Appia, commissioned in 312 BC by the censor Appius Claudius Caecus.<sup id="fnref-8"><a class="footnote-ref" href="#fn-8">8</a></sup></p>
+<p>By the late 3rd century AD, 11 aqueducts served the city, with a combined length of about 780 to 800 km (485 to 500 miles).<sup id="fnref2-8"><a class="footnote-ref" href="#fn-8">8</a></sup> Only about 47 km (29 miles) of that ran above ground.<sup id="fnref3-8"><a class="footnote-ref" href="#fn-8">8</a></sup> The famous arches were the exception; most of the system was a buried, sloping channel.</p>
+<p>Rome also produced one of the first infrastructure reports. Frontinus became the city's water commissioner (<em>curator aquarum</em>) in 97 AD and wrote <em>De aquaeductu</em>, an official account of the supply.<sup id="fnref4-8"><a class="footnote-ref" href="#fn-8">8</a></sup> Modern estimates based on his figures put the city's daily supply anywhere from about 520,000 to 635,000 cubic meters up to 1,000,000 cubic meters.<sup id="fnref5-8"><a class="footnote-ref" href="#fn-8">8</a></sup></p>
+<p>The pattern these cities set has lasted ever since: bring clean water in by gravity, carry dirty water away by gravity, and lay out streets so both are possible.</p>
+<h3>Why were old cities so afraid of fire?</h3>
+<p>For roughly 1,500 years after Rome, most European cities drew water from wells, rivers and conduits, and human waste went into a <strong>cesspit</strong>, a pit beneath or beside a building where it collected until someone emptied it. In Tudor England, the people who did that work were called gong farmers. They were allowed to work only between 9 pm and 5 am, which is why they were also called "nightmen."<sup id="fnref-9"><a class="footnote-ref" href="#fn-9">9</a></sup></p>
+<p>The waste, known as <strong>night soil</strong>, was carted out of town.<sup id="fnref2-9"><a class="footnote-ref" href="#fn-9">9</a></sup> In London, much of it went to riverside wharves such as Dung Wharf and was shipped by barge to farms and market gardens.<sup id="fnref3-9"><a class="footnote-ref" href="#fn-9">9</a></sup> In effect, this was a recycling system. It began to come apart once flushing toilets sent waste into sewers and rivers instead of into pits.</p>
+<p>Japan offers a non-European example. In the Edo period (1603-1868), local systems for circulating organic material formed between the early modern cities and the villages around them, and the use of night soil as fertilizer was especially common in the suburbs of Osaka and Edo (now Tokyo).<sup id="fnref-10"><a class="footnote-ref" href="#fn-10">10</a></sup> Edo also organized against fire: the Kyōhō Reforms of 1720 created the machi bikeshi, town fire brigades made up of commoners appointed by town officials, which in time came to be seen as a competent force and helped samurai brigades fight the 1747 Edo Castle fire.<sup id="fnref-11"><a class="footnote-ref" href="#fn-11">11</a></sup></p>
+<p>The bigger fear was fire. The Great Fire of London began on Sunday, September 2, 1666, in Thomas Farriner's bakery on Pudding Lane, and was mostly under control by September 5.<sup id="fnref-12"><a class="footnote-ref" href="#fn-12">12</a></sup> It destroyed 13,200 houses, 87 parish churches, St Paul's Cathedral, the Royal Exchange and the Guildhall, with damage estimated at £10 million.<sup id="fnref2-12"><a class="footnote-ref" href="#fn-12">12</a></sup> (The recorded death toll is low and widely disputed, so we do not give a figure here.)</p>
+<p>Two lasting city systems came out of the ashes. The first was organized firefighting: after the fire, insurance businesses hired men to fight fires, forming the first fire brigades.<sup id="fnref3-12"><a class="footnote-ref" href="#fn-12">12</a></sup> The second was the <strong>building code</strong>, legal rules for how buildings must be built. The Rebuilding of London Act 1666, which received royal assent on February 8, 1667, favored brick and stone; regulated wall thickness, street widths and house heights; and banned jetties, the overhanging upper floors that let fire leap across narrow lanes.<sup id="fnref-13"><a class="footnote-ref" href="#fn-13">13</a></sup> It was paid for with a duty on coal.<sup id="fnref2-13"><a class="footnote-ref" href="#fn-13">13</a></sup> Rebuilding under Christopher Wren's plans took more than 30 years, and the Monument to the fire, 202 feet (62 m) tall, went up in 1671-1677.<sup id="fnref4-12"><a class="footnote-ref" href="#fn-12">12</a></sup></p>
+<p>Private insurers moved first, and governments followed with rules for everyone.</p>
+<h3>How did cholera build the modern sewer?</h3>
+<p>Industrial cities in the 1800s grew faster than their wells and cesspits could cope with. Cholera made the problem impossible to ignore. Britain's first cholera epidemic, which ran to 1832, killed about 30,000 people.<sup id="fnref-14"><a class="footnote-ref" href="#fn-14">14</a></sup> The older explanation, <strong>miasma</strong>, held that disease spread through foul-smelling "bad air."</p>
+<p>In 1854 a London doctor, John Snow, tested a different idea. An outbreak began in Soho on August 31, 1854, and about 500 people died within 10 days.<sup id="fnref2-14"><a class="footnote-ref" href="#fn-14">14</a></sup> Snow mapped where the victims lived and found the deaths clustered around a single public water pump on Broad Street.<sup id="fnref3-14"><a class="footnote-ref" href="#fn-14">14</a></sup> The pump's handle was removed, and a leaking sewer was later found to have contaminated the well.<sup id="fnref4-14"><a class="footnote-ref" href="#fn-14">14</a></sup> His theory that cholera spread through water was not accepted at first.<sup id="fnref5-14"><a class="footnote-ref" href="#fn-14">14</a></sup> Acceptance came after an 1866 outbreak in East London struck areas not yet connected to the city's new sewers.<sup id="fnref6-14"><a class="footnote-ref" href="#fn-14">14</a></sup></p>
+<p>Those sewers had been prompted by smell rather than by Snow. In the hot summer of 1858, the Thames stank so badly that the episode became known as the "Great Stink."<sup id="fnref-15"><a class="footnote-ref" href="#fn-15">15</a></sup> Joseph Bazalgette, chief engineer of the Metropolitan Board of Works, then built six <strong>intercepting sewers</strong>, large pipes that catch the flow of many smaller sewers before it reaches the river and carry it elsewhere.<sup id="fnref2-15"><a class="footnote-ref" href="#fn-15">15</a></sup> They totaled about 100 miles (160 km), fed by about 450 miles (725 km) of main sewers, and used 318 million bricks and Portland cement, with pumping stations at Abbey Mills, Deptford and Chelsea, among others.<sup id="fnref3-15"><a class="footnote-ref" href="#fn-15">15</a></sup> The work cost about £3 million at the time.<sup id="fnref4-15"><a class="footnote-ref" href="#fn-15">15</a></sup></p>
+<p>The fix arrived before the science was settled. Bazalgette's sewers were designed partly to get rid of bad smells, and they cut cholera anyway, because they also kept sewage out of drinking water.</p>
+<p>Paris rebuilt on an even larger scale. Napoleon III made Haussmann prefect of the Seine in 1853, with a mandate to "aerate, unify and beautify" the city; Haussmann was dismissed in January 1870.<sup id="fnref-16"><a class="footnote-ref" href="#fn-16">16</a></sup> His program demolished 19,730 buildings containing about 120,000 homes and built 34,000 new buildings with about 215,300 apartments.<sup id="fnref2-16"><a class="footnote-ref" href="#fn-16">16</a></sup> Paris had 142 km (88 miles) of sewers in 1852, and the network grew about fourfold by 1869, while the engineer Eugène Belgrand's new aqueducts nearly doubled the water available per person.<sup id="fnref3-16"><a class="footnote-ref" href="#fn-16">16</a></sup> The program also created four major parks and 24 new squares.<sup id="fnref4-16"><a class="footnote-ref" href="#fn-16">16</a></sup></p>
+<p>Historians still argue about it: critics have said the wide new boulevards were meant partly to make uprisings easier to put down, and defenders call that a secondary motive. How much rents rose and how many working Parisians were pushed out are also disputed.</p>
+<p>Chicago had a different problem: it was too flat to drain. Ellis Chesbrough left Boston in 1855 to become engineer of Chicago's Board of Sewerage Commissioners, at a time when Chicago had the highest death rate of any US city.<sup id="fnref-17"><a class="footnote-ref" href="#fn-17">17</a></sup> Because the ground was too low for sewers to flow, he had downtown raised about 10 feet (3 m), with buildings lifted on jackscrews.<sup id="fnref2-17"><a class="footnote-ref" href="#fn-17">17</a></sup> He also built a water tunnel two miles (3.2 km) out under Lake Michigan to an offshore intake, called a crib.<sup id="fnref3-17"><a class="footnote-ref" href="#fn-17">17</a></sup></p>
+<p>In January 1900, gates at Lockport opened on the 28-mile (45 km) Sanitary and Ship Canal, and the Chicago River reversed direction, carrying sewage away from the lake.<sup id="fnref-18"><a class="footnote-ref" href="#fn-18">18</a></sup> Chicago did not build sewage treatment plants until the 1920s.<sup id="fnref2-18"><a class="footnote-ref" href="#fn-18">18</a></sup> (One widely repeated story, that disease killed about 12 percent of Chicagoans in 1885, is a documented myth: mortality records show no cholera deaths that year, and the <em>Chicago Tribune</em> retracted the claim in 2005.<sup id="fnref-19"><a class="footnote-ref" href="#fn-19">19</a></sup>)</p>
+<p>In London and Chicago alike, the first solution was to move waste somewhere else: farther down the Thames, or down the Illinois River. Treating it came decades later.</p>
+<h3>In Boston: making land and fighting fire</h3>
+<p>Boston's version of the sanitary story starts with a dam. A milldam closing off the tidal Back Bay was chartered in 1814; it cut off the tide's daily flushing and left a stagnant, polluted basin behind it.<sup id="fnref-20"><a class="footnote-ref" href="#fn-20">20</a></sup> Boston's answer was to fill the bay in. Filling began in 1857, and Back Bay itself was filled by 1882, with the work reaching Kenmore Square by 1890 and the Fens by 1900.<sup id="fnref2-20"><a class="footnote-ref" href="#fn-20">20</a></sup> The gravel came by rail from Needham, about 9 miles (14.5 km) away, with a 35-car train arriving every 45 minutes, day and night.<sup id="fnref3-20"><a class="footnote-ref" href="#fn-20">20</a></sup></p>
+<p>The neighborhood sits on <strong>landfill</strong>, ground made by dumping earth and gravel into marsh and tidal flats. That is one reason flooding is a live question in Boston today (more in <a href="/climate/">How cities are adapting to a changing climate</a>).</p>
+<p>Boston was also first with a new kind of network. On April 28, 1852, the city put into service an electric <strong>fire alarm telegraph</strong>, a system of street boxes wired to a central office so that pulling a box reported a fire's location at once.<sup id="fnref2-1"><a class="footnote-ref" href="#fn-1">1</a></sup> William F. Channing invented it with help from Moses G. Farmer, and it started with 40 boxes.<sup id="fnref3-1"><a class="footnote-ref" href="#fn-1">1</a></sup> The first alarm came in at 8:25 pm the next day.<sup id="fnref4-1"><a class="footnote-ref" href="#fn-1">1</a></sup></p>
+<p>Twenty years later, the network did not stop the city's worst fire. The Great Boston Fire began at 7:20 pm on November 9, 1872, at 83-87 Summer Street, and was contained around midday on November 10.<sup id="fnref-21"><a class="footnote-ref" href="#fn-21">21</a></sup></p>
+<p>It burned about 65 acres (26 hectares) and destroyed 776 buildings; reported deaths range from 26 to at least 30, and losses totaled $73.5 million at the time.<sup id="fnref2-21"><a class="footnote-ref" href="#fn-21">21</a></sup> The causes were a list of infrastructure failures: wooden mansard roofs, weak water pressure, too few hydrants with mismatched hose couplings, and alarm boxes that were kept locked.<sup id="fnref3-21"><a class="footnote-ref" href="#fn-21">21</a></sup> An outbreak of equine flu among the fire department's horses is often blamed, but a city commission found it caused only a few minutes' delay.<sup id="fnref4-21"><a class="footnote-ref" href="#fn-21">21</a></sup> Afterward, Boston widened streets, created Post Office Square and adopted limits on building height and area.<sup id="fnref5-21"><a class="footnote-ref" href="#fn-21">21</a></sup></p>
+<p>In our reading, 1872 is the clearest early case in this guide of something that keeps coming back: the technology existed, and the way it was run held it back. A locked alarm box is a management decision, not an engineering one.</p>
+<h3>When did cities get gas, electricity and subways?</h3>
+<p>From the early 1800s to 1900, cities added a new layer of network roughly every decade, each with its own company, its own franchise and its own pipes, wires or tracks under the street.</p>
+<ul>
+<li><strong>Gas light, London, 1807-1820s.</strong> In 1807, Frederick Winsor lit lamps on Pall Mall, using old musket barrels as gas pipes.<sup id="fnref2-22"><a class="footnote-ref" href="#fn-22">22</a></sup> The Gas Light and Coke Company, the world's first gas company, received a royal charter in 1812, and gas lit Westminster Bridge in 1813.<sup id="fnref3-22"><a class="footnote-ref" href="#fn-22">22</a></sup> By the 1820s, London had about 50,000 gas lamps on about 300 miles (480 km) of pipe.<sup id="fnref4-22"><a class="footnote-ref" href="#fn-22">22</a></sup></li>
+<li><strong>Underground railway, London, 1863.</strong> The Metropolitan Railway opened with 3.5 miles (5.6 km) of line between Paddington and Farringdon in January 1863.<sup id="fnref-23"><a class="footnote-ref" href="#fn-23">23</a></sup> Sources disagree slightly on the day: the National Lottery Heritage Fund gives January 9,<sup id="fnref2-23"><a class="footnote-ref" href="#fn-23">23</a></sup> while many Underground histories treat January 9 as the ceremonial opening and give January 10 for the first public service.</li>
+<li><strong>Telephone, 1876.</strong> Alexander Graham Bell's telephone patent was issued on March 7, 1876, and his notebook for March 10 records the words "Mr. Watson - Come here - I want to see you."<sup id="fnref-24"><a class="footnote-ref" href="#fn-24">24</a></sup></li>
+<li><strong>Central power station, New York, 1882.</strong> Thomas Edison's Pearl Street Station began supplying customers on September 4, 1882.<sup id="fnref2-25"><a class="footnote-ref" href="#fn-25">25</a></sup> On the first day it served about 85 customers and about 400 lamps; within a year it had 513 customers and about 10,000 lamps.<sup id="fnref3-25"><a class="footnote-ref" href="#fn-25">25</a></sup> It ran on low-voltage <strong>direct current</strong> from six coal-fired dynamos and covered about a quarter of a square mile (0.65 square km) of lower Manhattan.<sup id="fnref4-25"><a class="footnote-ref" href="#fn-25">25</a></sup> It was a <strong>central station</strong>: one plant serving many buildings over a network of wires, instead of each building making its own power.</li>
+<li><strong>Electric streetcars, Richmond, 1888.</strong> Frank Sprague's Richmond Union Passenger Railway in Virginia began running in February 1888 and became the model for electric street railways.<sup id="fnref4-26"><a class="footnote-ref" href="#fn-26">26</a></sup> By 1895 the US had almost 900 electric street railways on about 11,000 miles (17,700 km) of track, and horse-drawn street railways had nearly disappeared.<sup id="fnref5-26"><a class="footnote-ref" href="#fn-26">26</a></sup></li>
+</ul>
+<p>At the same time, two inventions let cities grow upward. The first passenger elevator was installed in 1857 in the Haughwout store in New York City, and elevators made buildings taller than four or five stories practical.<sup id="fnref-27"><a class="footnote-ref" href="#fn-27">27</a></sup></p>
+<p>Then came the <strong>steel frame</strong>, a grid of metal columns and beams that carries a building's weight so the outer walls no longer have to. The Home Insurance Building in Chicago, designed by William Le Baron Jenney and completed in 1885, had 10 stories (later 12), and its frame combined wrought iron, cast iron and Bessemer steel beams; it was demolished in 1931.<sup id="fnref-28"><a class="footnote-ref" href="#fn-28">28</a></sup> PBS calls it the first tall building held up by a steel skeleton,<sup id="fnref2-27"><a class="footnote-ref" href="#fn-27">27</a></sup> and it is often called the first skyscraper, though that title is debated, partly because its frame was mixed iron and steel.</p>
+<p>The 1880s and 1890s pulled cities in two directions at once. Streetcars let people live farther out along the lines, in what became known as <strong>streetcar suburbs</strong>, while elevators and steel let downtowns stack higher. Both trends depended on the new networks, and both made the street overhead and the ground underneath more crowded.</p>
+<h3>In Boston: the first American subway and a reservoir</h3>
+<p>Richmond's streetcars had a direct effect on Boston: their success helped persuade the city to approve a large electrification project.<sup id="fnref-26"><a class="footnote-ref" href="#fn-26">26</a></sup> Electric cars soon clogged downtown, and Boston went underground. Construction of the Tremont Street Subway began on March 28, 1895, and it opened at 6 am on September 1, 1897, running from Park Street to Boylston, as the first subway in the United States.<sup id="fnref2-2"><a class="footnote-ref" href="#fn-2">2</a></sup> More than 100,000 people rode it on the first day.<sup id="fnref3-2"><a class="footnote-ref" href="#fn-2">2</a></sup> It was built to relieve streetcar congestion and modeled on lines in London, Glasgow and Budapest; the legislature appropriated $5 million, and the project came in early and under budget.<sup id="fnref4-2"><a class="footnote-ref" href="#fn-2">2</a></sup></p>
+<p>Boston was also where the telephone first worked. On March 10, 1876, Alexander Graham Bell spoke the first intelligible words over an electric wire - "Mr. Watson, come here! I want to see you" - in the attic laboratory he shared with Thomas Watson at 5 Exeter Place in Boston.<sup id="fnref-29"><a class="footnote-ref" href="#fn-29">29</a></sup> An IEEE Milestone plaque now stands near Lafayette Place, at Avenue de Lafayette and Essex Street, and a separate marker at 109 Court Street marks the original laboratory where the two built their telephone equipment.<sup id="fnref2-29"><a class="footnote-ref" href="#fn-29">29</a></sup></p>
+<p>The networked era's biggest Boston project was water, and its cost fell on people far from the city. To build the Quabbin Reservoir in central Massachusetts, the state discontinued the towns of Dana, Enfield, Greenwich and Prescott on April 28, 1938.<sup id="fnref-30"><a class="footnote-ref" href="#fn-30">30</a></sup> About 2,500 residents left, and 7,613 graves were moved.<sup id="fnref2-30"><a class="footnote-ref" href="#fn-30">30</a></sup> Flooding began in July 1939, and the reservoir was declared full on June 22, 1946.<sup id="fnref3-30"><a class="footnote-ref" href="#fn-30">30</a></sup></p>
+<p>It holds 412 billion gallons (about 1.56 trillion liters) on 80,443 acres (about 32,550 hectares) taken by <strong>eminent domain</strong>, the government's power to take private property for public use with payment, and it supplies 46 metro Boston communities.<sup id="fnref4-30"><a class="footnote-ref" href="#fn-30">30</a></sup> Greater Boston's tap water still depends on a sacrifice made by people who never lived in the city (the system today is covered in <a href="/water/">Where your tap water comes from</a>).</p>
+<h3>How did the car remake the city?</h3>
+<p>In the middle of the 20th century, governments in many countries rebuilt cities around the car. The US version was the largest. The Federal-Aid Highway Act of 1956 authorized "over 41,000 miles" (66,000 km) of interstate highways,<sup id="fnref-31"><a class="footnote-ref" href="#fn-31">31</a></sup> and the federal government offered to pay 90% of the cost.<sup id="fnref-32"><a class="footnote-ref" href="#fn-32">32</a></sup> With that much money on the table, states had strong reasons to build, and many urban routes were run through the neighborhoods that were cheapest to clear and had the least political power to resist.</p>
+<p>In Atlanta, I-75, I-85 and I-20 destroyed downtown street grids and divided neighborhoods, and the areas cleared were mostly low-income Black communities.<sup id="fnref2-31"><a class="footnote-ref" href="#fn-31">31</a></sup> Overtown in Miami had an estimated 40,000 residents before I-95; about 8,000 remained after construction.<sup id="fnref2-32"><a class="footnote-ref" href="#fn-32">32</a></sup> Rondo in St. Paul, Minnesota, lost an estimated 600 family homes and 300 businesses to I-94.<sup id="fnref3-32"><a class="footnote-ref" href="#fn-32">32</a></sup> Syracuse's 15th Ward (I-81) and the neighborhoods along New York's Cross-Bronx Expressway are other often-cited cases.<sup id="fnref4-32"><a class="footnote-ref" href="#fn-32">32</a></sup> Across the whole program, the US Department of Transportation has estimated that more than 475,000 households, and over a million people, were displaced by federal highway construction.<sup id="fnref5-32"><a class="footnote-ref" href="#fn-32">32</a></sup> (That figure comes to us secondhand, through HISTORY.com; we could not locate the original DOT document.)</p>
+<p>The same legal tools, eminent domain and federal money, were also used to clear areas labeled as slums under <strong>urban renewal</strong> programs. The two efforts often worked together, and in many cities it is hard to separate the damage done by one from the other.</p>
+<p>The program's defenders and its critics are often describing the same roads, which sped travel between cities and suburbs for some people and demolished the homes of others.</p>
+<p>Boston also had its own fight over new highways. The planned Inner Belt (I-695) was to be an eight-lane, mostly elevated loop of about 10 miles through Charlestown, Somerville, Cambridge, Brookline, the Fenway, Roxbury and the South End, and the eight-lane Southwest Expressway would have cost Roxbury 5,000 homes.<sup id="fnref-33"><a class="footnote-ref" href="#fn-33">33</a></sup></p>
+<p>Residents, a coalition called the Greater Boston Committee on the Transportation Crisis, and groups including the Black Panther Party and the Black United Front in Roxbury organized against them.<sup id="fnref2-33"><a class="footnote-ref" href="#fn-33">33</a></sup> On February 11, 1970, Governor Francis Sargent froze new construction and land-taking for a restudy, and on November 30, 1972, he cancelled both roads; Massachusetts then became the first state to put highway funds toward transit, including the Red Line extension to Alewife and the Orange Line relocation.<sup id="fnref3-33"><a class="footnote-ref" href="#fn-33">33</a></sup></p>
+<p>Boston's best-known highway story comes at the end of the century, when the city tried to undo part of the car era. The Central Artery/Tunnel Project, known as the Big Dig, replaced the elevated Central Artery (I-93) through downtown with tunnels.<sup id="fnref-34"><a class="footnote-ref" href="#fn-34">34</a></sup> It was conceived in the 1970s, begun in 1991 and completed in 2007, and Britannica calls it the largest and most expensive highway project in US history.<sup id="fnref-35"><a class="footnote-ref" href="#fn-35">35</a></sup> The Zakim Bridge was completed in 2003.<sup id="fnref2-35"><a class="footnote-ref" href="#fn-35">35</a></sup> The cost depends on what you count:</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>About $2.4 billion</td>
+<td>The original estimate<sup id="fnref4-34"><a class="footnote-ref" href="#fn-34">34</a></sup></td>
+</tr>
+<tr>
+<td>More than $14 billion ($14.8 billion cited)</td>
+<td>Final construction cost<sup id="fnref5-34"><a class="footnote-ref" href="#fn-34">34</a></sup></td>
+</tr>
+<tr>
+<td>About $24 billion</td>
+<td>Estimated total including interest, with debt payments running to 2038 (a <em>Boston Globe</em> estimate, quoted by Boston.com)<sup id="fnref6-34"><a class="footnote-ref" href="#fn-34">34</a></sup></td>
+</tr>
+</tbody>
+</table></div>
+<p>In July 2006, a tunnel ceiling collapse killed a motorist and led to a $26 million settlement.<sup id="fnref2-34"><a class="footnote-ref" href="#fn-34">34</a></sup> The project also freed about 300 acres (120 hectares) of land and turned the old highway corridor into the Rose Kennedy Greenway park.<sup id="fnref3-34"><a class="footnote-ref" href="#fn-34">34</a></sup></p>
+<h3>Why did cities start cleaning up?</h3>
+<p>After about 1970, the main job in many wealthy countries shifted from building new networks to cleaning up and protecting the ones already there. In the US, the shift had a famous image. Ohio's Cuyahoga River burned at least nine times between 1868 and 1952.<sup id="fnref-36"><a class="footnote-ref" href="#fn-36">36</a></sup> A fire on June 22, 1969, helped build the movement behind the first Earth Day in 1970 and the founding of the US Environmental Protection Agency in December 1970.<sup id="fnref2-36"><a class="footnote-ref" href="#fn-36">36</a></sup></p>
+<p>The legal tool that followed was water law. The 1948 Federal Water Pollution Control Act was the first major US water pollution law, and its 1972 amendments, which became known as the Clean Water Act, required permits for <strong>point-source</strong> discharges, meaning pollution from a single identifiable outlet such as a pipe, and funded grants to build sewage treatment plants.<sup id="fnref-37"><a class="footnote-ref" href="#fn-37">37</a></sup> Congress passed it over President Nixon's veto.<sup id="fnref3-36"><a class="footnote-ref" href="#fn-36">36</a></sup> In 1987, Congress replaced the construction grants with the Clean Water State Revolving Fund.<sup id="fnref2-37"><a class="footnote-ref" href="#fn-37">37</a></sup> That move away from direct federal grants still shapes how US cities pay for water and sewer work, a subject covered in <a href="/money/">Who pays for the city</a>.</p>
+<p>In Boston, the law arrived through the courts. In the 1980s, <strong>combined sewer overflows</strong>, outlets where pipes carrying both sewage and rainwater spill into waterways when they fill up, sent about 3.3 billion gallons (12.5 billion liters) a year into Boston Harbor.<sup id="fnref2-3"><a class="footnote-ref" href="#fn-3">3</a></sup> The Massachusetts Water Resources Authority (MWRA) took over Greater Boston's water and sewer systems in 1985, and in 1986 federal Judge A. David Mazzone set a 13-year court-ordered construction schedule, which he oversaw until 2004.<sup id="fnref3-3"><a class="footnote-ref" href="#fn-3">3</a></sup></p>
+<p>Dumping of sewage sludge into the harbor ended in 1991, and new <strong>primary treatment</strong> (letting solids settle out) began at Deer Island in 1995.<sup id="fnref4-3"><a class="footnote-ref" href="#fn-3">3</a></sup> <strong>Secondary treatment</strong>, which uses bacteria to break down dissolved pollution, started up in stages from 1997, and all of it was running in 2001-2005.<sup id="fnref5-3"><a class="footnote-ref" href="#fn-3">3</a></sup> Since 2000, treated effluent has traveled through a tunnel to an <strong>outfall</strong> 9.5 miles (15 km) out in Massachusetts Bay instead of into the harbor.<sup id="fnref6-3"><a class="footnote-ref" href="#fn-3">3</a></sup></p>
+<p>The cleanup did not come from voluntary investment. It came from a lawsuit, a judge and a schedule. And as with the river fire, the harbor and the Great Stink, the action came after a visible failure.</p>
+<h3>What's changing now (2026): data and climate</h3>
+<p>The 2010s brought a new promise: the <strong>smart city</strong>, using sensors, data and software to run traffic, energy, water and other services. Some cities have folded these tools into everyday operations, and some projects ran into public resistance.</p>
+<p>Much of this is now routine. Water and wastewater utilities run SCADA (supervisory control and data acquisition) systems that send sensor readings in real time and let a central control station monitor remote pump stations and the distribution network over a wide-area network.<sup id="fnref-38"><a class="footnote-ref" href="#fn-38">38</a></sup> In Boston, as of 2026, the 311 service center takes non-emergency requests by phone, online and through the BOS:311 app 24 hours a day, every day of the year, for problems from potholes and street lights to missed trash pickups.<sup id="fnref-39"><a class="footnote-ref" href="#fn-39">39</a></sup></p>
+<p>The best-known case of resistance is Toronto. Sidewalk Labs, owned by Google's parent company Alphabet, proposed a waterfront district there called Quayside. Waterfront Toronto, the public agency in charge, limited the plan to 12 acres (5 hectares) from the roughly 190 acres (77 hectares) Sidewalk had proposed, and residents and advocates objected to its plans for collecting data.<sup id="fnref-40"><a class="footnote-ref" href="#fn-40">40</a></sup> Sidewalk Labs cancelled the project in May 2020, citing COVID-19 and economic uncertainty.<sup id="fnref2-40"><a class="footnote-ref" href="#fn-40">40</a></sup> Supporters saw a chance to test new technology at scale; critics saw too much private control over public data.</p>
+<p>Climate is now part of the job description of city government. London's Thames Barrier, a <strong>storm surge barrier</strong> of movable gates across the river, became operational in 1982, and as of November 17, 2025, it had closed 221 times for flood defense.<sup id="fnref-41"><a class="footnote-ref" href="#fn-41">41</a></sup> Its operator's Thames Estuary 2100 plan sets out how flood risk will be managed to the end of the century and adjusts as sea-level projections change.<sup id="fnref2-41"><a class="footnote-ref" href="#fn-41">41</a></sup></p>
+<p>In Boston, the city published Climate Ready Boston in December 2016.<sup id="fnref-42"><a class="footnote-ref" href="#fn-42">42</a></sup> It projected rising relative sea levels even with sharp cuts in emissions, a growing risk of coastal flooding, and a possible tripling of heat-related deaths by 2050 without <strong>climate adaptation</strong>, meaning changes to infrastructure and planning that reduce the harm.<sup id="fnref-43"><a class="footnote-ref" href="#fn-43">43</a></sup> For a city that built Back Bay on filled marsh, the question of where the water goes is back where it started in 1814.</p>
+<p>Each era added a layer to solve the problem of its day, and almost none of the older layers went away. A city in 2026 runs on all of them at once.</p>
+<h3>How this guide is organized</h3>
+<p>The rest of the guide takes those layers one at a time, starting with what comes into a building and ending with who pays for it. It begins with <strong>water</strong>, then <strong>power</strong> and <strong>light</strong>, then <strong>streets and signals</strong>, then <strong>transit</strong>, then <strong>waste</strong>, then <strong>emergencies and data</strong>. It closes with <strong>who runs it and pays for it</strong>: the agencies, authorities, workers and budgets behind every pipe and wire described here. Each chapter explains how its system works today, how it got that way, and what is changing now, with Boston as the running example.</p>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=How%20a%20City%20Works%20correction%3A%20How%20cities%20came%20to%20need%20infrastructure">Report an error in this section</a></p></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/"><span>Back to</span>How a City Works</a><a class="next" href="/machine/"><span>Next · 02</span>A city is one machine</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">43 of the guide's 379 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-1" value="1">
+<p>ETHW (IEEE): Milestones - Electric Fire Alarm System, 1852 - <a href="https://ethw.org/Milestones:Electric_Fire_Alarm_System,_1852" rel="noopener" target="_blank">ethw.org</a>&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2-1" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref3-1" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref4-1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li><li id="fn-2" value="2">
+<p>Mass Moments (Mass Humanities): Nation&#x27;s First Subway - <a href="https://www.massmoments.org/moment-details.html?mid=254" rel="noopener" target="_blank">massmoments.org</a>&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref2-2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref3-2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref4-2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref5-2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li><li id="fn-3" value="3">
+<p>MWRA: The Boston Harbor Project - <a href="https://www.mwra.com/harbor/html/bostonharborproject.htm" rel="noopener" target="_blank">mwra.com</a>&#160;<a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref2-3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref3-3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref4-3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref5-3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref6-3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li><li id="fn-4" value="4">
+<p>Wikipedia: Uruk - <a href="https://en.wikipedia.org/wiki/Uruk" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-4" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref2-4" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref3-4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li><li id="fn-5" value="5">
+<p>UNESCO World Heritage Centre: Archaeological Ruins at Moenjodaro - <a href="https://whc.unesco.org/en/list/138" rel="noopener" target="_blank">whc.unesco.org</a>&#160;<a class="footnote-backref" href="#fnref-5" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref2-5" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref3-5" title="Jump back to footnote 5 in the text">↩</a></p>
+</li><li id="fn-6" value="6">
+<p>Harappa.com: Mohenjo-daro Street Drains - <a href="https://www.harappa.com/blog/mohenjo-daro-street-drains" rel="noopener" target="_blank">harappa.com</a>&#160;<a class="footnote-backref" href="#fnref-6" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref2-6" title="Jump back to footnote 6 in the text">↩</a></p>
+</li><li id="fn-7" value="7">
+<p>Wikipedia: Cloaca Maxima - <a href="https://en.wikipedia.org/wiki/Cloaca_Maxima" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-7" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref2-7" title="Jump back to footnote 7 in the text">↩</a></p>
+</li><li id="fn-8" value="8">
+<p>Wikipedia: Roman aqueduct - <a href="https://en.wikipedia.org/wiki/Roman_aqueduct" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-8" title="Jump back to footnote 8 in the text">↩</a><a class="footnote-backref" href="#fnref2-8" title="Jump back to footnote 8 in the text">↩</a><a class="footnote-backref" href="#fnref3-8" title="Jump back to footnote 8 in the text">↩</a><a class="footnote-backref" href="#fnref4-8" title="Jump back to footnote 8 in the text">↩</a><a class="footnote-backref" href="#fnref5-8" title="Jump back to footnote 8 in the text">↩</a></p>
+</li><li id="fn-9" value="9">
+<p>Wikipedia: Gong farmer - <a href="https://en.wikipedia.org/wiki/Gong_farmer" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-9" title="Jump back to footnote 9 in the text">↩</a><a class="footnote-backref" href="#fnref2-9" title="Jump back to footnote 9 in the text">↩</a><a class="footnote-backref" href="#fnref3-9" title="Jump back to footnote 9 in the text">↩</a><a class="footnote-backref" href="#fnref4-9" title="Jump back to footnote 9 in the text">↩</a></p>
+</li><li id="fn-10" value="10">
+<p>Cambridge University Press: Between Nature and Human: History of the Use of Night Soil in Japan (Handbook of Environmental History in Japan) - <a href="https://www.cambridge.org/core/books/abs/handbook-of-environmental-history-in-japan/between-nature-and-human-history-of-the-use-of-night-soil-in-japan/CF189B539B14B880030FD8C29A7DC111" rel="noopener" target="_blank">cambridge.org</a>&#160;<a class="footnote-backref" href="#fnref-10" title="Jump back to footnote 10 in the text">↩</a></p>
+</li><li id="fn-11" value="11">
+<p>Wikipedia: Firefighting in Japan - <a href="https://en.wikipedia.org/wiki/Firefighting_in_Japan" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-11" title="Jump back to footnote 11 in the text">↩</a></p>
+</li><li id="fn-12" value="12">
+<p>London Fire Brigade Museum: The Great Fire of London - <a href="https://www.london-fire.gov.uk/museum/history-and-stories/the-great-fire-of-london" rel="noopener" target="_blank">london-fire.gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-12" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref2-12" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref3-12" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref4-12" title="Jump back to footnote 12 in the text">↩</a></p>
+</li><li id="fn-13" value="13">
+<p>Wikipedia: Rebuilding of London Act 1666 - <a href="https://en.wikipedia.org/wiki/Rebuilding_of_London_Act_1666" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-13" title="Jump back to footnote 13 in the text">↩</a><a class="footnote-backref" href="#fnref2-13" title="Jump back to footnote 13 in the text">↩</a></p>
+</li><li id="fn-14" value="14">
+<p>London Museum: John Snow - Cholera &amp; the Broad Street pump - <a href="https://www.londonmuseum.org.uk/collections/london-stories/john-snow-cholera-broad-street-pump/" rel="noopener" target="_blank">londonmuseum.org.uk</a>&#160;<a class="footnote-backref" href="#fnref-14" title="Jump back to footnote 14 in the text">↩</a><a class="footnote-backref" href="#fnref2-14" title="Jump back to footnote 14 in the text">↩</a><a class="footnote-backref" href="#fnref3-14" title="Jump back to footnote 14 in the text">↩</a><a class="footnote-backref" href="#fnref4-14" title="Jump back to footnote 14 in the text">↩</a><a class="footnote-backref" href="#fnref5-14" title="Jump back to footnote 14 in the text">↩</a><a class="footnote-backref" href="#fnref6-14" title="Jump back to footnote 14 in the text">↩</a></p>
+</li><li id="fn-15" value="15">
+<p>Institution of Civil Engineers: London sewer system - <a href="https://ice.org.uk/what-is-civil-engineering/infrastructure-projects/london-sewer-system" rel="noopener" target="_blank">ice.org.uk</a>&#160;<a class="footnote-backref" href="#fnref-15" title="Jump back to footnote 15 in the text">↩</a><a class="footnote-backref" href="#fnref2-15" title="Jump back to footnote 15 in the text">↩</a><a class="footnote-backref" href="#fnref3-15" title="Jump back to footnote 15 in the text">↩</a><a class="footnote-backref" href="#fnref4-15" title="Jump back to footnote 15 in the text">↩</a><a class="footnote-backref" href="#fnref5-15" title="Jump back to footnote 15 in the text">↩</a><a class="footnote-backref" href="#fnref6-15" title="Jump back to footnote 15 in the text">↩</a></p>
+</li><li id="fn-16" value="16">
+<p>Wikipedia: Haussmann&#x27;s renovation of Paris - <a href="https://en.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-16" title="Jump back to footnote 16 in the text">↩</a><a class="footnote-backref" href="#fnref2-16" title="Jump back to footnote 16 in the text">↩</a><a class="footnote-backref" href="#fnref3-16" title="Jump back to footnote 16 in the text">↩</a><a class="footnote-backref" href="#fnref4-16" title="Jump back to footnote 16 in the text">↩</a></p>
+</li><li id="fn-17" value="17">
+<p>ASCE: Ellis Sylvester Chesbrough - <a href="https://www.asce.org/about-civil-engineering/history-and-heritage/notable-civil-engineers/ellis-sylvester-chesbrough" rel="noopener" target="_blank">asce.org</a>&#160;<a class="footnote-backref" href="#fnref-17" title="Jump back to footnote 17 in the text">↩</a><a class="footnote-backref" href="#fnref2-17" title="Jump back to footnote 17 in the text">↩</a><a class="footnote-backref" href="#fnref3-17" title="Jump back to footnote 17 in the text">↩</a></p>
+</li><li id="fn-18" value="18">
+<p>Linda Hall Library: A Reversal of the Chicago River - <a href="https://www.lindahall.org/experience/digital-exhibitions/centuries-of-civil-engineering/02-water-supply/a-reversal-of-the-chicago-river/" rel="noopener" target="_blank">lindahall.org</a>&#160;<a class="footnote-backref" href="#fnref-18" title="Jump back to footnote 18 in the text">↩</a><a class="footnote-backref" href="#fnref2-18" title="Jump back to footnote 18 in the text">↩</a></p>
+</li><li id="fn-19" value="19">
+<p>Wikipedia: Chicago 1885 cholera epidemic myth - <a href="https://en.wikipedia.org/wiki/Chicago_1885_cholera_epidemic_myth" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-19" title="Jump back to footnote 19 in the text">↩</a></p>
+</li><li id="fn-20" value="20">
+<p>Wikipedia: Back Bay, Boston - <a href="https://en.wikipedia.org/wiki/Back_Bay,_Boston" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-20" title="Jump back to footnote 20 in the text">↩</a><a class="footnote-backref" href="#fnref2-20" title="Jump back to footnote 20 in the text">↩</a><a class="footnote-backref" href="#fnref3-20" title="Jump back to footnote 20 in the text">↩</a></p>
+</li><li id="fn-21" value="21">
+<p>Wikipedia: Great Boston Fire of 1872 - <a href="https://en.wikipedia.org/wiki/Great_Boston_Fire_of_1872" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref2-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref3-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref4-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref5-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref6-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref7-21" title="Jump back to footnote 21 in the text">↩</a><a class="footnote-backref" href="#fnref8-21" title="Jump back to footnote 21 in the text">↩</a></p>
+</li><li id="fn-22" value="22">
+<p>London Museum: Gas lamps illuminated London - <a href="https://www.londonmuseum.org.uk/collections/london-stories/gas-lamps-illuminated-london/" rel="noopener" target="_blank">londonmuseum.org.uk</a>&#160;<a class="footnote-backref" href="#fnref-22" title="Jump back to footnote 22 in the text">↩</a><a class="footnote-backref" href="#fnref2-22" title="Jump back to footnote 22 in the text">↩</a><a class="footnote-backref" href="#fnref3-22" title="Jump back to footnote 22 in the text">↩</a><a class="footnote-backref" href="#fnref4-22" title="Jump back to footnote 22 in the text">↩</a></p>
+</li><li id="fn-23" value="23">
+<p>National Lottery Heritage Fund: World&#x27;s oldest Tube carriage rides again - <a href="https://heritagefund.org.uk/news/worlds-oldest-tube-carriage-rides-again-150th-anniversary-london-underground" rel="noopener" target="_blank">heritagefund.org.uk</a>&#160;<a class="footnote-backref" href="#fnref-23" title="Jump back to footnote 23 in the text">↩</a><a class="footnote-backref" href="#fnref2-23" title="Jump back to footnote 23 in the text">↩</a></p>
+</li><li id="fn-24" value="24">
+<p>Library of Congress: Bell papers digitized - <a href="https://www.loc.gov/loc/lcib/0404/digitize.html" rel="noopener" target="_blank">loc.gov</a>&#160;<a class="footnote-backref" href="#fnref-24" title="Jump back to footnote 24 in the text">↩</a></p>
+</li><li id="fn-25" value="25">
+<p>ETHW (IEEE): Milestones - Pearl Street Station, 1882 - <a href="https://ethw.org/Milestones:Pearl_Street_Station" rel="noopener" target="_blank">ethw.org</a>&#160;<a class="footnote-backref" href="#fnref-25" title="Jump back to footnote 25 in the text">↩</a><a class="footnote-backref" href="#fnref2-25" title="Jump back to footnote 25 in the text">↩</a><a class="footnote-backref" href="#fnref3-25" title="Jump back to footnote 25 in the text">↩</a><a class="footnote-backref" href="#fnref4-25" title="Jump back to footnote 25 in the text">↩</a></p>
+</li><li id="fn-26" value="26">
+<p>ETHW (IEEE): Milestones - Richmond Union Passenger Railway, 1888 - <a href="https://ethw.org/Milestones:Richmond_Union_Passenger_Railway,_1888" rel="noopener" target="_blank">ethw.org</a>&#160;<a class="footnote-backref" href="#fnref-26" title="Jump back to footnote 26 in the text">↩</a><a class="footnote-backref" href="#fnref2-26" title="Jump back to footnote 26 in the text">↩</a><a class="footnote-backref" href="#fnref3-26" title="Jump back to footnote 26 in the text">↩</a><a class="footnote-backref" href="#fnref4-26" title="Jump back to footnote 26 in the text">↩</a><a class="footnote-backref" href="#fnref5-26" title="Jump back to footnote 26 in the text">↩</a></p>
+</li><li id="fn-27" value="27">
+<p>PBS Building Big: Skyscraper Basics - <a href="https://www.pbs.org/wgbh/buildingbig/for_siemens/basics/sky_basics.html" rel="noopener" target="_blank">pbs.org</a>&#160;<a class="footnote-backref" href="#fnref-27" title="Jump back to footnote 27 in the text">↩</a><a class="footnote-backref" href="#fnref2-27" title="Jump back to footnote 27 in the text">↩</a></p>
+</li><li id="fn-28" value="28">
+<p>Optima: Chicago skyscraper history - Home Insurance Building - <a href="https://www.optima.inc/chicago-skyscraper-history-home-insurance-building/" rel="noopener" target="_blank">optima.inc</a>&#160;<a class="footnote-backref" href="#fnref-28" title="Jump back to footnote 28 in the text">↩</a></p>
+</li><li id="fn-29" value="29">
+<p>Engineering and Technology History Wiki (IEEE): Milestones: First Intelligible Voice Transmission over Electric Wire, 1876 - <a href="https://ethw.org/Milestones:First_Intelligible_Voice_Transmission_over_Electric_Wire,_1876" rel="noopener" target="_blank">ethw.org</a>&#160;<a class="footnote-backref" href="#fnref-29" title="Jump back to footnote 29 in the text">↩</a><a class="footnote-backref" href="#fnref2-29" title="Jump back to footnote 29 in the text">↩</a></p>
+</li><li id="fn-30" value="30">
+<p>Mass Moments (Mass Humanities): Quabbin Reservoir Filled to the Brim - <a href="https://www.massmoments.org/moment-details/quabbin-reservoir-filled-to-the-brim.html" rel="noopener" target="_blank">massmoments.org</a>&#160;<a class="footnote-backref" href="#fnref-30" title="Jump back to footnote 30 in the text">↩</a><a class="footnote-backref" href="#fnref2-30" title="Jump back to footnote 30 in the text">↩</a><a class="footnote-backref" href="#fnref3-30" title="Jump back to footnote 30 in the text">↩</a><a class="footnote-backref" href="#fnref4-30" title="Jump back to footnote 30 in the text">↩</a><a class="footnote-backref" href="#fnref5-30" title="Jump back to footnote 30 in the text">↩</a></p>
+</li><li id="fn-31" value="31">
+<p>University of Georgia Libraries (Urban Renewal exhibit): The Interstate Highway System - <a href="https://spotlight-prod.galib.uga.edu/spotlight/urban-renewal/feature/the-interstate-highway-system" rel="noopener" target="_blank">spotlight-prod.galib.uga.edu</a>&#160;<a class="footnote-backref" href="#fnref-31" title="Jump back to footnote 31 in the text">↩</a><a class="footnote-backref" href="#fnref2-31" title="Jump back to footnote 31 in the text">↩</a></p>
+</li><li id="fn-32" value="32">
+<p>HISTORY.com: How Interstate Highways Gutted Communities - <a href="https://www.history.com/articles/interstate-highway-system-infrastructure-construction-segregation" rel="noopener" target="_blank">history.com</a>&#160;<a class="footnote-backref" href="#fnref-32" title="Jump back to footnote 32 in the text">↩</a><a class="footnote-backref" href="#fnref2-32" title="Jump back to footnote 32 in the text">↩</a><a class="footnote-backref" href="#fnref3-32" title="Jump back to footnote 32 in the text">↩</a><a class="footnote-backref" href="#fnref4-32" title="Jump back to footnote 32 in the text">↩</a><a class="footnote-backref" href="#fnref5-32" title="Jump back to footnote 32 in the text">↩</a></p>
+</li><li id="fn-33" value="33">
+<p>The West End Museum: The Inner Belt: The Highway Massachusetts Didn&#x27;t Build - <a href="https://thewestendmuseum.org/?p=23960" rel="noopener" target="_blank">thewestendmuseum.org</a>&#160;<a class="footnote-backref" href="#fnref-33" title="Jump back to footnote 33 in the text">↩</a><a class="footnote-backref" href="#fnref2-33" title="Jump back to footnote 33 in the text">↩</a><a class="footnote-backref" href="#fnref3-33" title="Jump back to footnote 33 in the text">↩</a></p>
+</li><li id="fn-34" value="34">
+<p>Boston.com: Can We Talk Rationally About the Big Dig Yet? - <a href="https://www.boston.com/cars/news-and-reviews/2015/01/05/can-we-talk-rationally-about-the-big-dig-yet/" rel="noopener" target="_blank">boston.com</a>&#160;<a class="footnote-backref" href="#fnref-34" title="Jump back to footnote 34 in the text">↩</a><a class="footnote-backref" href="#fnref2-34" title="Jump back to footnote 34 in the text">↩</a><a class="footnote-backref" href="#fnref3-34" title="Jump back to footnote 34 in the text">↩</a><a class="footnote-backref" href="#fnref4-34" title="Jump back to footnote 34 in the text">↩</a><a class="footnote-backref" href="#fnref5-34" title="Jump back to footnote 34 in the text">↩</a><a class="footnote-backref" href="#fnref6-34" title="Jump back to footnote 34 in the text">↩</a></p>
+</li><li id="fn-35" value="35">
+<p>Britannica: Central Artery/Tunnel Project - <a href="https://britannica.com/topic/Central-Artery-Tunnel-Project" rel="noopener" target="_blank">britannica.com</a>&#160;<a class="footnote-backref" href="#fnref-35" title="Jump back to footnote 35 in the text">↩</a><a class="footnote-backref" href="#fnref2-35" title="Jump back to footnote 35 in the text">↩</a></p>
+</li><li id="fn-36" value="36">
+<p>HISTORY.com: The Cuyahoga River fire and the Clean Water Act - <a href="https://www.history.com/articles/epa-earth-day-cleveland-cuyahoga-river-fire-clean-water-act" rel="noopener" target="_blank">history.com</a>&#160;<a class="footnote-backref" href="#fnref-36" title="Jump back to footnote 36 in the text">↩</a><a class="footnote-backref" href="#fnref2-36" title="Jump back to footnote 36 in the text">↩</a><a class="footnote-backref" href="#fnref3-36" title="Jump back to footnote 36 in the text">↩</a></p>
+</li><li id="fn-37" value="37">
+<p>US EPA: History of the Clean Water Act - <a href="https://www.epa.gov/laws-regulations/history-clean-water-act" rel="noopener" target="_blank">epa.gov</a>&#160;<a class="footnote-backref" href="#fnref-37" title="Jump back to footnote 37 in the text">↩</a><a class="footnote-backref" href="#fnref2-37" title="Jump back to footnote 37 in the text">↩</a></p>
+</li><li id="fn-38" value="38">
+<p>NIST National Cybersecurity Center of Excellence: Securing Water and Wastewater Utilities (project description) - <a href="https://www.nccoe.nist.gov/sites/default/files/2023-06/securing-water-and-wastewater-utilities-project-description-final.pdf" rel="noopener" target="_blank">nccoe.nist.gov</a>&#160;<a class="footnote-backref" href="#fnref-38" title="Jump back to footnote 38 in the text">↩</a><a class="footnote-backref" href="#fnref2-38" title="Jump back to footnote 38 in the text">↩</a></p>
+</li><li id="fn-39" value="39">
+<p>City of Boston: Boston 311 - <a href="https://www.boston.gov/departments/boston-311" rel="noopener" target="_blank">boston.gov</a>&#160;<a class="footnote-backref" href="#fnref-39" title="Jump back to footnote 39 in the text">↩</a></p>
+</li><li id="fn-40" value="40">
+<p>ArchDaily: Sidewalk Labs Cancels Quayside Smart City Project in Toronto - <a href="https://www.archdaily.com/939152/sidewalk-labs-cancels-quayside-smart-city-project-in-toronto" rel="noopener" target="_blank">archdaily.com</a>&#160;<a class="footnote-backref" href="#fnref-40" title="Jump back to footnote 40 in the text">↩</a><a class="footnote-backref" href="#fnref2-40" title="Jump back to footnote 40 in the text">↩</a></p>
+</li><li id="fn-41" value="41">
+<p>GOV.UK (Environment Agency): The Thames Barrier - <a href="https://www.gov.uk/guidance/the-thames-barrier" rel="noopener" target="_blank">gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-41" title="Jump back to footnote 41 in the text">↩</a><a class="footnote-backref" href="#fnref2-41" title="Jump back to footnote 41 in the text">↩</a></p>
+</li><li id="fn-42" value="42">
+<p>Barr Foundation: Climate resiliency efforts in Boston - <a href="https://www.barrfoundation.org/blog/climate-resiliency-efforts-in-boston/" rel="noopener" target="_blank">barrfoundation.org</a>&#160;<a class="footnote-backref" href="#fnref-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref2-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref3-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref4-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref5-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref6-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref7-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref8-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref9-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref10-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref11-42" title="Jump back to footnote 42 in the text">↩</a><a class="footnote-backref" href="#fnref12-42" title="Jump back to footnote 42 in the text">↩</a></p>
+</li><li id="fn-43" value="43">
+<p>Georgetown Climate Center Adaptation Clearinghouse: Climate Ready Boston - <a href="https://www.adaptationclearinghouse.org/resources/climate-ready-boston.html" rel="noopener" target="_blank">adaptationclearinghouse.org</a>&#160;<a class="footnote-backref" href="#fnref-43" title="Jump back to footnote 43 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://dockwatch.cold.fyi">Dockwatch</a> <span>- a Bluebikes dock tracker</span></li><li><a href="https://citations.cold.fyi">Department of Public Courtesy</a> <span>- citations for sidewalk crimes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/primer/" class=on><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/"><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/"><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/"><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("wk-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (tb) tb.textContent = dark ? "Streetlights off" : "Streetlights on";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("wk-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Ancient and medieval": "var(--u-wht)", "Sanitary city (1800s)": "var(--u-grn)", "Networked city (1880-1945)": "var(--u-red)",
+      "Car city (1945-1980)": "var(--u-yel)", "Regulated city (1970-2010)": "var(--u-blu)", "Digital and climate city (2010-now)": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Ancient and medieval","Sanitary city (1800s)","Networked city (1880-1945)","Car city (1945-1980)","Regulated city (1970-2010)","Digital and climate city (2010-now)"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Water: "var(--u-blu)", Sewer: "var(--u-grn)", Power: "var(--u-red)", "Gas and steam": "var(--u-yel)", Light: "var(--u-red)", Traffic: "var(--u-org)",
+      Transit: "var(--u-pur)", Roads: "var(--u-pnk)", Waste: "var(--u-grn)", Streets: "var(--u-pnk)", Emergency: "var(--u-red)", "Data and telecom": "var(--u-org)",
+      Government: "var(--u-wht)", Money: "var(--u-wht)", Rules: "var(--u-pnk)", Climate: "var(--u-blu)", History: "var(--u-wht)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (d.category === "Gas and steam" ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* toolbox */
+  function num(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : NaN; }
+  (function pressure() {
+    if (!$("wp-p")) return;
+    function run() {
+      var p = num("wp-p"), f = Math.floor(num("wp-f")), h = num("wp-h");
+      if (!(p > 0) || !(f >= 1) || !(h > 0)) { $("wp-out").innerHTML = '<p class="warn">Enter a street pressure in psi, a floor number and a floor height.</p>'; return; }
+      var rise = (f - 1) * h, left = p - 0.433 * rise, top = Math.floor((p - 35) / (0.433 * h)) + 1;
+      var zones = Math.max(1, Math.ceil(f / 10));
+      $("wp-out").innerHTML = '<div class="big">' + (left > 0 ? Math.round(left) + " psi" : "No pressure") + "</div>" +
+        "<p>About " + Math.round(rise) + " ft above street level, before pipe friction. " +
+        (left >= 35 ? "Above the 35 psi a top fixture needs." : '<span class="warn">Below the 35 psi a top fixture needs: this floor would need a booster pump or a roof tank.</span>') + "</p>" +
+        "<p>On " + Math.round(p) + " psi alone, water should arrive with useful pressure up to about floor " + Math.max(0, top) + ". A " + f + "-story tower split at about 10 floors per zone would have roughly " + zones + " pressure zone" + (zones > 1 ? "s" : "") + ".</p>";
+    }
+    ["wp-p", "wp-f", "wp-h"].forEach(function (id) { $(id).addEventListener("input", run); }); run();
+  })();
+  (function trash() {
+    if (!$("tr-n")) return;
+    function run() {
+      var n = Math.floor(num("tr-n"));
+      if (!(n >= 1)) { $("tr-out").innerHTML = '<p class="warn">Enter how many people live in the household.</p>'; return; }
+      var lb = n * 4.9 * 365, t = lb / 2000;
+      $("tr-out").innerHTML = '<div class="big">' + Math.round(lb).toLocaleString() + " lb <small>a year (" + (Math.round(t * 10) / 10) + " short tons, " + Math.round(lb * 0.4536).toLocaleString() + " kg)</small></div>" +
+        "<p>At the 2018 national split, about " + Math.round(lb * 0.5).toLocaleString() + " lb would be landfilled, " + Math.round(lb * 0.321).toLocaleString() + " lb recycled or composted and " + Math.round(lb * 0.118).toLocaleString() + " lb burned for energy.</p>" +
+        "<p>This counts all municipal solid waste divided by population, including businesses and institutions, so a real household usually puts out less at the curb.</p>";
+    }
+    $("tr-n").addEventListener("input", run); run();
+  })();
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

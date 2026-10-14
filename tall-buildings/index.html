@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Water Gets to the Top Floor: Roof Tanks, Booster Pumps, Pressure Zones | How a City Works</title>
+<meta name="description" content="The pressure in a street main can push water up only a few stories. New York&#x27;s first gravity aqueduct reached about the sixth floor, so taller buildings...">
+<link rel="canonical" href="https://works.cold.fyi/tall-buildings/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b6b3a">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="How Water Gets to the Top Floor: Roof Tanks, Booster Pumps, Pressure Zones | How a City Works"><meta property="og:description" content="The pressure in a street main can push water up only a few stories. New York&#x27;s first gravity aqueduct reached about the sixth floor, so taller buildings...">
+<meta property="og:url" content="https://works.cold.fyi/tall-buildings/"><meta property="og:image" content="https://works.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/overpass-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "How Water Gets to the Top Floor: Roof Tanks, Booster Pumps, Pressure Zones", "description": "The pressure in a street main can push water up only a few stories. New York's first gravity aqueduct reached about the sixth floor, so taller buildings...", "url": "https://works.cold.fyi/tall-buildings/", "image": "https://works.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "How a City Works", "url": "https://works.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "How a City Works", "item": "https://works.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "Why water reaches the 40th floor", "item": "https://works.cold.fyi/tall-buildings/"}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/overpass-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/overpass-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a public-works field manual - highway guide-sign hero, Overpass (a Highway Gothic descendant) for display, APWA utility-locate colors as section colors, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:light;
+  --bg:#f4f2ec; --panel:#fffdf8; --panel2:#f1eee6; --ink:#17191b; --muted:#5a5a55; --line:#d8d3c7;
+  --tape:#b8480c; --tape-ink:#ffffff; --ink-on:#ffffff; --ink-on-y:#17191b; --hot:#c0281b; --cue:#0a5fb4; --sign:#0b6b3a; --sign-ink:#ffffff;
+  --u-red:#c8261c; --u-yel:#e9b10f; --u-org:#e76a12; --u-blu:#1b63c6; --u-grn:#23884a; --u-pur:#7d45bf; --u-pnk:#d94b8c; --u-wht:#8a877f;
+  --s1:var(--u-blu); --s2:var(--u-grn); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pur);
+  --f-display:"Overpass","Highway Gothic","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-display);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- works.cold.fyi overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:-.01em}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{background:var(--sign);color:var(--sign-ink);border-radius:14px;padding:1.1rem 1.4rem 1.2rem;box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 6px #fff;position:relative;margin:.6rem 0 1.2rem;max-width:44rem}
+.sign .shield{position:absolute;right:1.1rem;top:1rem;font:800 .8rem var(--f-display);background:#fff;color:var(--sign);border-radius:6px;padding:.2rem .45rem;letter-spacing:.04em}
+.sign h1{color:#fff;font-weight:800;font-size:clamp(3rem,11vw,6.6rem);line-height:.9;margin:.2rem 0 .2rem}
+.sign h1 .file{color:#fff}
+.sign .exit{font:700 .9rem var(--f-display);letter-spacing:.02em;opacity:.92;display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.sign .exit b{background:#fff;color:var(--sign);border-radius:4px;padding:.05rem .4rem}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:.95rem;transform:none;clip-path:none;border-radius:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.45rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-blu)}.labels li:nth-child(2){--lc:var(--u-red)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-grn)}.labels li:nth-child(5){--lc:var(--u-pur)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.15rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-display);font-weight:800;font-size:.38em;transform:none;clip-path:none;border-radius:5px;color:var(--sci,#fff);background:var(--sc,var(--tape));padding:.22em .45em .12em;vertical-align:.55em}
+.chip-n{color:var(--sci,#fff);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3{font-weight:800}
+.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--sign);color:#fff}
+.seg button[aria-pressed="true"]{color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"],:root[data-theme="dark"] .btn{color:#141617}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"],:root:not([data-theme="light"]) .btn{color:#141617}}
+.gl-list .cat{color:#fff}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .t.wh{fill:#fff}
+.dg .earth{fill:var(--panel2)}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.key{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin:.6rem 0 0;font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.key i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-tall-buildings">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">How a City Works</a> / Why water reaches the 40th floor</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">How a City Works</a></h2><a href="/primer/"><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/" class=on aria-current=page><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/"><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/"><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 04 of 25 · about 8 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-blu);--sci:var(--ink-on)"><h1 class="sec-h1" id="sec-tall-buildings" style="--sc:var(--u-blu);--sci:var(--ink-on)"><span class="tape">04</span>Why water reaches the 40th floor</h1>
+<p class="short"><strong>The short version:</strong> The pressure in a street main can push water up only a few stories. New York's first gravity aqueduct reached about the sixth floor, so taller buildings learned to pump water to a rooftop tank and let it fall back down.<sup id="fnref2-49"><a class="footnote-ref" href="#fn-49">49</a></sup> Modern towers use booster pumps and split themselves into vertical <strong>pressure zones</strong> of about 9 to 10 floors, because the main US model plumbing code caps the pressure at a fixture at 80 psi.<sup id="fnref3-101"><a class="footnote-ref" href="#fn-101">101</a></sup><sup id="fnref-124"><a class="footnote-ref" href="#fn-124">124</a></sup> Fire protection runs on a separate set of pipes, the standpipes, which fire engines can feed from the street through a two-inlet fitting often called a Siamese connection.<sup id="fnref2-65"><a class="footnote-ref" href="#fn-65">65</a></sup></p>
+<h3>How high can street pressure push water?</h3>
+<p>Water pressure and height are two ways of measuring the same thing. Each foot of water standing above a point adds about 0.433 pounds per square inch (psi) at that point, and with floors about 10 feet apart, each floor costs about 4.33 psi.<sup id="fnref4-101"><a class="footnote-ref" href="#fn-101">101</a></sup> To lift water one floor, you need about 4.33 psi of push; to deliver it at a usable pressure on that floor, you need more on top.</p>
+<p>Plumbing engineers design for a minimum of about 35 psi at the highest fixture in a zone.<sup id="fnref5-101"><a class="footnote-ref" href="#fn-101">101</a></sup> Our arithmetic, using that figure: a street main at 60 psi could in theory lift water about 138 feet (42 m) before friction losses, but to arrive with 35 psi to spare, water can rise only about (60 - 35) / 0.433, or roughly 58 feet. That is five or six floors. Real buildings lose more pressure to pipe friction, meters and backflow preventers, and street pressure varies by neighborhood, so "five or six stories" is a rule of thumb rather than a constant.</p>
+<p>History lines up with the arithmetic. New York's Croton Aqueduct, opened in 1842, was a gravity system whose reservoirs sat about 60 feet (18 m) above the city, which was enough to lift water to roughly the sixth story.<sup id="fnref3-49"><a class="footnote-ref" href="#fn-49">49</a></sup></p>
+<div class="diagram wide"><div class="dhead">Diagram 3 · Water in a tall building</div><div class="dscroll"><svg class="dg" viewBox="0 0 720 410" role="img" aria-label="A tall building splits into vertical pressure zones of about 9 to 10 floors. Street pressure lifts water about 5 to 6 floors; booster pumps push it higher, often to a roof tank. Pressure-reducing valves keep each zone under 80 psi. A separate standpipe, fed by the Siamese connection on the sidewalk, serves firefighters."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0 L10 5 L0 10z"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="aha" d="M0 0 L10 5 L0 10z"/></marker></defs><text class="s cap" x="8" y="20" text-anchor="start">Top fixture needs about 35 psi; no fixture may get more than 80 psi</text><rect class="bx" x="300" y="60" width="170" height="330" rx="2"/><line class="grid" x1="300" y1="150" x2="470" y2="150"/><text class="t sm" x="385" y="109.0" text-anchor="middle">Zone 3</text><line class="grid" x1="300" y1="240" x2="470" y2="240"/><text class="t sm" x="385" y="199.0" text-anchor="middle">Zone 2</text><line class="grid" x1="300" y1="360" x2="470" y2="360"/><text class="t sm" x="385" y="304.0" text-anchor="middle">Zone 1</text><line class="grid" x1="302" y1="70" x2="312" y2="70"/><line class="grid" x1="302" y1="82" x2="312" y2="82"/><line class="grid" x1="302" y1="94" x2="312" y2="94"/><line class="grid" x1="302" y1="106" x2="312" y2="106"/><line class="grid" x1="302" y1="118" x2="312" y2="118"/><line class="grid" x1="302" y1="130" x2="312" y2="130"/><line class="grid" x1="302" y1="142" x2="312" y2="142"/><line class="grid" x1="302" y1="154" x2="312" y2="154"/><line class="grid" x1="302" y1="166" x2="312" y2="166"/><line class="grid" x1="302" y1="178" x2="312" y2="178"/><line class="grid" x1="302" y1="190" x2="312" y2="190"/><line class="grid" x1="302" y1="202" x2="312" y2="202"/><line class="grid" x1="302" y1="214" x2="312" y2="214"/><line class="grid" x1="302" y1="226" x2="312" y2="226"/><line class="grid" x1="302" y1="238" x2="312" y2="238"/><line class="grid" x1="302" y1="250" x2="312" y2="250"/><line class="grid" x1="302" y1="262" x2="312" y2="262"/><line class="grid" x1="302" y1="274" x2="312" y2="274"/><line class="grid" x1="302" y1="286" x2="312" y2="286"/><line class="grid" x1="302" y1="298" x2="312" y2="298"/><line class="grid" x1="302" y1="310" x2="312" y2="310"/><line class="grid" x1="302" y1="322" x2="312" y2="322"/><line class="grid" x1="302" y1="334" x2="312" y2="334"/><line class="grid" x1="302" y1="346" x2="312" y2="346"/><line class="grid" x1="302" y1="358" x2="312" y2="358"/><rect class="bx blu" x="350" y="36" width="70" height="22"/><text class="s xs" x="385" y="51" text-anchor="middle">roof tank</text><rect class="bx blu" x="325" y="364" width="120" height="22"/><text class="s xs" x="385" y="379" text-anchor="middle">booster pumps</text><path class="w blu" d="M150 375 L325 375" marker-end="url(#ah)"/><text class="s xs" x="150" y="400" text-anchor="start">street main: lifts water about 5-6 floors on its own</text><path class="w blu wthick" d="M460 364 L460 60" opacity=".55"/><circle class="f-blu" cx="460" cy="154" r="5"/><circle class="f-blu" cx="460" cy="244" r="5"/><text class="s" x="485" y="158" text-anchor="start">pressure-reducing valve</text><text class="s" x="485" y="172" text-anchor="start">keeps each zone under 80 psi</text><text class="s" x="485" y="300" text-anchor="start">each zone spans</text><text class="s" x="485" y="314" text-anchor="start">about 9-10 floors</text><path class="w red" d="M312 360 L312 66"/><text class="s hot" x="286" y="210" text-anchor="end">standpipe</text><text class="s xs" x="286" y="224" text-anchor="end">for firefighters</text><path class="w red" d="M240 345 L312 345"/><rect class="f-red" x="226" y="339" width="14" height="12"/><text class="s hot" x="220" y="337" text-anchor="end">Siamese connection</text><text class="s xs" x="220" y="351" text-anchor="end">(fire engines pump in)</text></svg></div></div>
+
+<h3>Why do New York buildings have wooden water tanks on the roof?</h3>
+<p>By the 1880s, New York buildings were rising above 10 stories, past what the Croton system could reach. The answer was a pump that lifted water to a tank on the roof, which then fed the floors below by gravity.<sup id="fnref4-49"><a class="footnote-ref" href="#fn-49">49</a></sup> The city required rooftop tanks on buildings over six stories.<sup id="fnref5-49"><a class="footnote-ref" href="#fn-49">49</a></sup></p>
+<p>The tanks are still there, and many are still made of wood:</p>
+<ul>
+<li>A typical wooden tank is 10 to 12 feet (3 to 3.7 m) high, holds up to 10,000 gallons (about 38 cubic meters), and lasts 25 to 30 years.<sup id="fnref9-49"><a class="footnote-ref" href="#fn-49">49</a></sup></li>
+<li>An electric pump refills the tank when the level drops, and the bottom of the tank is reserved for emergencies.<sup id="fnref3-66"><a class="footnote-ref" href="#fn-66">66</a></sup></li>
+<li>Three family firms make about 90% of them: Rosenwach Tank Company, Isseks Brothers and American Pipe and Tank.<sup id="fnref10-49"><a class="footnote-ref" href="#fn-49">49</a></sup><sup id="fnref4-66"><a class="footnote-ref" href="#fn-66">66</a></sup> Isseks Brothers, founded in 1890, was the first firm formed specifically to make tanks.<sup id="fnref11-49"><a class="footnote-ref" href="#fn-49">49</a></sup> Rosenwach builds with Western cedar.<sup id="fnref5-66"><a class="footnote-ref" href="#fn-66">66</a></sup></li>
+</ul>
+<p>How many tanks are there? Sources disagree: Vital City, in a 2026 piece by architectural historian Thomas Mellins, estimates more than 5,600, while the real estate site 6sqft says "up to 17,000."<sup id="fnref6-49"><a class="footnote-ref" href="#fn-49">49</a></sup><sup id="fnref2-66"><a class="footnote-ref" href="#fn-66">66</a></sup> The more recent figure is the lower one.</p>
+<p>One reason the system has lasted: a gravity tank is simple, needs no power to deliver water, and keeps flowing during a blackout until it runs dry. The pump only has to run when the tank needs refilling.</p>
+<h3>What is a booster pump, and why are tanks disappearing?</h3>
+<p>A <strong>booster pump</strong> raises water pressure so it can reach upper floors. Newer New York buildings increasingly skip the roof tank and use pumps in the basement instead.<sup id="fnref7-49"><a class="footnote-ref" href="#fn-49">49</a></sup> Large modern installations, such as the Burj Khalifa's, use booster sets with variable-speed drives.<sup id="fnref-93"><a class="footnote-ref" href="#fn-93">93</a></sup> A variable-speed pump speeds up and slows down to hold a steady pressure as demand changes, rather than filling a tank and shutting off.</p>
+<p>The trade-off: a pumped system frees the roof, avoids the weight of a full tank, and keeps water from sitting in an open-air vessel, but it depends on power and controls. A tank system has the reverse profile.</p>
+<h3>What is a pressure zone?</h3>
+<p>Pumping water to the top of a tall building creates the opposite problem at the bottom: too much pressure. In the US, the International Plumbing Code (IPC), a model code, caps static pressure at fixtures at 80 psi (about 550 kPa) in section 604.8 and requires a <strong>pressure-reducing valve</strong> (PRV) wherever pressure would exceed that.<sup id="fnref2-124"><a class="footnote-ref" href="#fn-124">124</a></sup></p>
+<p>With a minimum of 35 psi at the top fixture and a maximum of 80 psi at the bottom, one zone can span only about 9 to 10 floors.<sup id="fnref6-101"><a class="footnote-ref" href="#fn-101">101</a></sup> Our arithmetic: (80 - 35) / 4.33 psi per floor is about 10 floors. So a tall building is plumbed as a stack of shorter buildings, each with its own pressure range, set by its height, its pumps and its valves.</p>
+<p>The design choices that follow:<sup id="fnref7-101"><a class="footnote-ref" href="#fn-101">101</a></sup></p>
+<ul>
+<li><strong>Separate booster pumps for each zone</strong> are the most efficient approach up to about 40 to 60 stories.</li>
+<li><strong>Ultra-high-rises</strong> add intermediate tanks partway up. Pumps lift water to a tank on a mechanical floor, and a second set of pumps draws from that tank (a "suction tank") to feed the zones above.</li>
+<li><strong>Water heaters</strong> are best placed inside the zone they serve, because PRVs complicate the loops that keep hot water circulating to distant fixtures.</li>
+</ul>
+<p>This is one reason many towers have mechanical floors partway up, often with louvers instead of windows. Some of that space can house the pumps and tanks for the zones above.</p>
+<h3>How does the Burj Khalifa get water to the top?</h3>
+<p>The world's tallest building as of 2026, in Dubai, uses the staged approach at full scale. Xylem supplied six water transfer pump sets and seven pressure booster sets, all with variable-speed drives.<sup id="fnref2-93"><a class="footnote-ref" href="#fn-93">93</a></sup> The pumps sit in the basement and on two technical floors about a third of the way up.<sup id="fnref3-93"><a class="footnote-ref" href="#fn-93">93</a></sup> Average supply is 946,000 liters (about 250,000 gallons) a day, supplemented by water recovered from air-conditioning condensate, and about 1,000 cubic meters a day are boosted all the way to the top.<sup id="fnref4-93"><a class="footnote-ref" href="#fn-93">93</a></sup></p>
+<h3>How do firefighters get water up a tall building?</h3>
+<p>Domestic plumbing and fire protection are separate systems with separate rules. A <strong>standpipe</strong> is a vertical pipe that feeds hose valves inside a larger building.<sup id="fnref3-65"><a class="footnote-ref" href="#fn-65">65</a></sup> It lets firefighters connect hoses on the floor near the fire instead of dragging them up from the street.</p>
+<p>On the outside of the building, at street level, is the <strong>fire department connection</strong>, often called a <strong>Siamese connection</strong>: a fitting with at least two inlets.<sup id="fnref4-65"><a class="footnote-ref" href="#fn-65">65</a></sup> Fire engines pump water through the Siamese into the building's standpipes and sprinkler system to raise flow and pressure.<sup id="fnref5-65"><a class="footnote-ref" href="#fn-65">65</a></sup> The US standard NFPA 14 requires a sign at each connection saying which system it feeds.<sup id="fnref6-65"><a class="footnote-ref" href="#fn-65">65</a></sup></p>
+<p>Pressure limits apply here too. NFPA 14 caps pressure at standpipe hose connections at 175 psi (about 1,200 kPa).<sup id="fnref3-124"><a class="footnote-ref" href="#fn-124">124</a></sup> The same zoning logic that governs sinks and showers applies to fire hoses, at a higher ceiling, because hose crews need usable pressure without dangerous excess on the lower floors.</p>
+<p>Standpipes come in two broad kinds. <strong>Wet</strong> standpipes keep water in the pipe at all times; automatic wet systems rely on a fire pump for pressure, while manual wet systems have no pump behind them.<sup id="fnref-125"><a class="footnote-ref" href="#fn-125">125</a></sup> <strong>Dry</strong> standpipes hold air instead, and in a manual dry system, with no pump or water supply of its own, firefighters must charge the pipe through the fire department connection before they can attack the fire.<sup id="fnref2-125"><a class="footnote-ref" href="#fn-125">125</a></sup> The fire pumps themselves are covered in the US by a separate NFPA standard, NFPA 20, the Standard for the Installation of Stationary Pumps for Fire Protection.<sup id="fnref-126"><a class="footnote-ref" href="#fn-126">126</a></sup></p>
+<h3>In Boston</h3>
+<p>Greater Boston's regional supply arrives from the Quabbin and Wachusett reservoirs through deep gravity tunnels, and the local water departments distribute it from there.<sup id="fnref7-108"><a class="footnote-ref" href="#fn-108">108</a></sup><sup id="fnref9-67"><a class="footnote-ref" href="#fn-67">67</a></sup> (The full route is in <a href="/water/">Where your tap water comes from</a>.) The physics in Boston is the same as in New York or Dubai: street pressure serves the lower floors, and anything tall pumps.</p>
+<p>Our arithmetic, if a pressure cap like the IPC's 80 psi applies: a 40-story Boston tower would need about four pressure zones, and anything much taller would face the same choice New York and Dubai engineers face between per-zone boosters and intermediate tanks.<sup id="fnref8-101"><a class="footnote-ref" href="#fn-101">101</a></sup> The IPC is a model code, and Massachusetts writes its own.</p>
+<p>Massachusetts does set its own cap at the same number. The state plumbing code, 248 CMR 10.14(2)(e), requires a pressure-reducing valve wherever pressure at a fixture exceeds 80 psi, and section 10.14(2)(d) requires a booster pump and pressure tank, or another compliant means, where supply pressure cannot meet the code's minimums.<sup id="fnref-127"><a class="footnote-ref" href="#fn-127">127</a></sup> On the street side, a 2013 BWSC planning presentation described Boston's distribution system as five pressure zones with pressures from 60 to 112 psi.<sup id="fnref-128"><a class="footnote-ref" href="#fn-128">128</a></sup> We did not find a source on whether rooftop tanks or basement boosters dominate in Boston's towers.</p>
+<h3>How it changed</h3>
+<ul>
+<li><strong>1842:</strong> New York's Croton Aqueduct opens, delivering water by gravity to about the sixth story.<sup id="fnref12-49"><a class="footnote-ref" href="#fn-49">49</a></sup></li>
+<li><strong>1880s:</strong> Buildings pass 10 stories, and pump-filled rooftop tanks become standard.<sup id="fnref13-49"><a class="footnote-ref" href="#fn-49">49</a></sup></li>
+<li><strong>1890:</strong> Isseks Brothers is founded, the first company formed specifically to make New York's rooftop tanks.<sup id="fnref14-49"><a class="footnote-ref" href="#fn-49">49</a></sup></li>
+<li><strong>20th century to now:</strong> Newer buildings increasingly use basement booster pumps instead of roof tanks.<sup id="fnref15-49"><a class="footnote-ref" href="#fn-49">49</a></sup> Supertall towers stack pumps and tanks on intermediate floors, as the Burj Khalifa does.<sup id="fnref5-93"><a class="footnote-ref" href="#fn-93">93</a></sup></li>
+</ul>
+<p>In our reading, the history is a shift from storage to control. The roof tank stored water at the right height and let gravity do the work. Variable-speed pumps hold pressure electronically, floor by floor, and depend on power and controls to do it.</p>
+<h3>What's changing now (2026)</h3>
+<ul>
+<li><strong>New York's tanks are still being built.</strong> Writing in May 2026, Vital City describes wooden tanks as a living trade, with three family firms making most of them, even as newer buildings shift to basement pumps.<sup id="fnref16-49"><a class="footnote-ref" href="#fn-49">49</a></sup></li>
+<li><strong>Booster design keeps evolving.</strong> Engineering guidance published in November 2025 covers booster pump design for high-rises within the 80 psi fixture cap and 175 psi standpipe cap.<sup id="fnref4-124"><a class="footnote-ref" href="#fn-124">124</a></sup></li>
+<li><strong>Pumps run more of the system.</strong> As more towers use pumps instead of gravity tanks, backup power matters more for keeping water flowing to upper floors during an outage (see <a href="/power/">How electricity gets to your building</a>).</li>
+</ul>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=How%20a%20City%20Works%20correction%3A%20Why%20water%20reaches%20the%2040th%20floor">Report an error in this section</a></p></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/water/"><span>Previous · 03</span>Where your tap water comes from</a><a class="next" href="/sewers/"><span>Next · 05</span>Where it goes after you flush (or it rains)</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">12 of the guide's 379 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-49" value="49">
+<p>Vital City: New York&#x27;s Wooden Water Tanks - <a href="https://www.vitalcitynyc.org/nyc-wooden-water-tanks-architecture-history/" rel="noopener" target="_blank">vitalcitynyc.org</a>&#160;<a class="footnote-backref" href="#fnref-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref2-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref3-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref4-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref5-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref6-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref7-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref8-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref9-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref10-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref11-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref12-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref13-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref14-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref15-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref16-49" title="Jump back to footnote 49 in the text">↩</a><a class="footnote-backref" href="#fnref17-49" title="Jump back to footnote 49 in the text">↩</a></p>
+</li><li id="fn-65" value="65">
+<p>QRFS: What is a Siamese connection - <a href="https://blog.qrfs.com/54-what-is-a-siamese-connection/" rel="noopener" target="_blank">blog.qrfs.com</a>&#160;<a class="footnote-backref" href="#fnref-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref2-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref3-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref4-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref5-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref6-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref7-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref8-65" title="Jump back to footnote 65 in the text">↩</a><a class="footnote-backref" href="#fnref9-65" title="Jump back to footnote 65 in the text">↩</a></p>
+</li><li id="fn-66" value="66">
+<p>6sqft: The history behind NYC&#x27;s water towers - <a href="https://www.6sqft.com/nyc-water-towers-history-use-and-infrastructure/" rel="noopener" target="_blank">6sqft.com</a>&#160;<a class="footnote-backref" href="#fnref-66" title="Jump back to footnote 66 in the text">↩</a><a class="footnote-backref" href="#fnref2-66" title="Jump back to footnote 66 in the text">↩</a><a class="footnote-backref" href="#fnref3-66" title="Jump back to footnote 66 in the text">↩</a><a class="footnote-backref" href="#fnref4-66" title="Jump back to footnote 66 in the text">↩</a><a class="footnote-backref" href="#fnref5-66" title="Jump back to footnote 66 in the text">↩</a></p>
+</li><li id="fn-67" value="67">
+<p>MWRA: Metropolitan Water Tunnel Program - <a href="https://www.mwra.com/node/4287" rel="noopener" target="_blank">mwra.com</a>&#160;<a class="footnote-backref" href="#fnref-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref2-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref3-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref4-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref5-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref6-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref7-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref8-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref9-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref10-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref11-67" title="Jump back to footnote 67 in the text">↩</a><a class="footnote-backref" href="#fnref12-67" title="Jump back to footnote 67 in the text">↩</a></p>
+</li><li id="fn-93" value="93">
+<p>Xylem: Supplying water to the world&#x27;s tallest building - <a href="https://www.xylem.com/en-uk/making-waves/commercial-buildings/supplying-water-to-the-worlds-tallest-building/" rel="noopener" target="_blank">xylem.com</a>&#160;<a class="footnote-backref" href="#fnref-93" title="Jump back to footnote 93 in the text">↩</a><a class="footnote-backref" href="#fnref2-93" title="Jump back to footnote 93 in the text">↩</a><a class="footnote-backref" href="#fnref3-93" title="Jump back to footnote 93 in the text">↩</a><a class="footnote-backref" href="#fnref4-93" title="Jump back to footnote 93 in the text">↩</a><a class="footnote-backref" href="#fnref5-93" title="Jump back to footnote 93 in the text">↩</a><a class="footnote-backref" href="#fnref6-93" title="Jump back to footnote 93 in the text">↩</a></p>
+</li><li id="fn-101" value="101">
+<p>PHCP Pros: High-rise plumbing design and plumbing codes - <a href="https://www.phcppros.com/articles/1899-high-rise-plumbing-design-and-plumbing-codes" rel="noopener" target="_blank">phcppros.com</a>&#160;<a class="footnote-backref" href="#fnref-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref2-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref3-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref4-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref5-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref6-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref7-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref8-101" title="Jump back to footnote 101 in the text">↩</a><a class="footnote-backref" href="#fnref9-101" title="Jump back to footnote 101 in the text">↩</a></p>
+</li><li id="fn-108" value="108">
+<p>MWRA: Water System History - <a href="https://www.mwra.com/04water/html/hist5.htm" rel="noopener" target="_blank">mwra.com</a>&#160;<a class="footnote-backref" href="#fnref-108" title="Jump back to footnote 108 in the text">↩</a><a class="footnote-backref" href="#fnref2-108" title="Jump back to footnote 108 in the text">↩</a><a class="footnote-backref" href="#fnref3-108" title="Jump back to footnote 108 in the text">↩</a><a class="footnote-backref" href="#fnref4-108" title="Jump back to footnote 108 in the text">↩</a><a class="footnote-backref" href="#fnref5-108" title="Jump back to footnote 108 in the text">↩</a><a class="footnote-backref" href="#fnref6-108" title="Jump back to footnote 108 in the text">↩</a><a class="footnote-backref" href="#fnref7-108" title="Jump back to footnote 108 in the text">↩</a></p>
+</li><li id="fn-124" value="124">
+<p>Consulting-Specifying Engineer: Design basics for booster pumps in high-rise buildings - <a href="https://www.csemag.com/design-basics-for-booster-pumps-in-high-rise-buildings/" rel="noopener" target="_blank">csemag.com</a>&#160;<a class="footnote-backref" href="#fnref-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref2-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref3-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref4-124" title="Jump back to footnote 124 in the text">↩</a></p>
+</li><li id="fn-125" value="125">
+<p>Fire Engineering: Standpipe 101, Part 1 - <a href="https://www.fireengineering.com/fire-safety/standpipes-101-part-1/" rel="noopener" target="_blank">fireengineering.com</a>&#160;<a class="footnote-backref" href="#fnref-125" title="Jump back to footnote 125 in the text">↩</a><a class="footnote-backref" href="#fnref2-125" title="Jump back to footnote 125 in the text">↩</a></p>
+</li><li id="fn-126" value="126">
+<p>NFPA: NFPA 20, Standard for the Installation of Stationary Pumps for Fire Protection - <a href="https://nfpa92.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=20" rel="noopener" target="_blank">nfpa92.nfpa.org</a>&#160;<a class="footnote-backref" href="#fnref-126" title="Jump back to footnote 126 in the text">↩</a></p>
+</li><li id="fn-127" value="127">
+<p>Cornell Legal Information Institute: 248 CMR 10.14 (Massachusetts plumbing code) - <a href="https://www.law.cornell.edu/regulations/massachusetts/248-CMR-10-14" rel="noopener" target="_blank">law.cornell.edu</a>&#160;<a class="footnote-backref" href="#fnref-127" title="Jump back to footnote 127 in the text">↩</a></p>
+</li><li id="fn-128" value="128">
+<p>Mass.gov: Long-Range Planning and System Improvements at BWSC (2013) - <a href="https://www.mass.gov/doc/long-range-planning-and-system-improvements-at-bwsc/download" rel="noopener" target="_blank">mass.gov</a>&#160;<a class="footnote-backref" href="#fnref-128" title="Jump back to footnote 128 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://dockwatch.cold.fyi">Dockwatch</a> <span>- a Bluebikes dock tracker</span></li><li><a href="https://citations.cold.fyi">Department of Public Courtesy</a> <span>- citations for sidewalk crimes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/primer/"><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/" class=on><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/"><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/"><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("wk-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (tb) tb.textContent = dark ? "Streetlights off" : "Streetlights on";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("wk-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Ancient and medieval": "var(--u-wht)", "Sanitary city (1800s)": "var(--u-grn)", "Networked city (1880-1945)": "var(--u-red)",
+      "Car city (1945-1980)": "var(--u-yel)", "Regulated city (1970-2010)": "var(--u-blu)", "Digital and climate city (2010-now)": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Ancient and medieval","Sanitary city (1800s)","Networked city (1880-1945)","Car city (1945-1980)","Regulated city (1970-2010)","Digital and climate city (2010-now)"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Water: "var(--u-blu)", Sewer: "var(--u-grn)", Power: "var(--u-red)", "Gas and steam": "var(--u-yel)", Light: "var(--u-red)", Traffic: "var(--u-org)",
+      Transit: "var(--u-pur)", Roads: "var(--u-pnk)", Waste: "var(--u-grn)", Streets: "var(--u-pnk)", Emergency: "var(--u-red)", "Data and telecom": "var(--u-org)",
+      Government: "var(--u-wht)", Money: "var(--u-wht)", Rules: "var(--u-pnk)", Climate: "var(--u-blu)", History: "var(--u-wht)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (d.category === "Gas and steam" ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* toolbox */
+  function num(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : NaN; }
+  (function pressure() {
+    if (!$("wp-p")) return;
+    function run() {
+      var p = num("wp-p"), f = Math.floor(num("wp-f")), h = num("wp-h");
+      if (!(p > 0) || !(f >= 1) || !(h > 0)) { $("wp-out").innerHTML = '<p class="warn">Enter a street pressure in psi, a floor number and a floor height.</p>'; return; }
+      var rise = (f - 1) * h, left = p - 0.433 * rise, top = Math.floor((p - 35) / (0.433 * h)) + 1;
+      var zones = Math.max(1, Math.ceil(f / 10));
+      $("wp-out").innerHTML = '<div class="big">' + (left > 0 ? Math.round(left) + " psi" : "No pressure") + "</div>" +
+        "<p>About " + Math.round(rise) + " ft above street level, before pipe friction. " +
+        (left >= 35 ? "Above the 35 psi a top fixture needs." : '<span class="warn">Below the 35 psi a top fixture needs: this floor would need a booster pump or a roof tank.</span>') + "</p>" +
+        "<p>On " + Math.round(p) + " psi alone, water should arrive with useful pressure up to about floor " + Math.max(0, top) + ". A " + f + "-story tower split at about 10 floors per zone would have roughly " + zones + " pressure zone" + (zones > 1 ? "s" : "") + ".</p>";
+    }
+    ["wp-p", "wp-f", "wp-h"].forEach(function (id) { $(id).addEventListener("input", run); }); run();
+  })();
+  (function trash() {
+    if (!$("tr-n")) return;
+    function run() {
+      var n = Math.floor(num("tr-n"));
+      if (!(n >= 1)) { $("tr-out").innerHTML = '<p class="warn">Enter how many people live in the household.</p>'; return; }
+      var lb = n * 4.9 * 365, t = lb / 2000;
+      $("tr-out").innerHTML = '<div class="big">' + Math.round(lb).toLocaleString() + " lb <small>a year (" + (Math.round(t * 10) / 10) + " short tons, " + Math.round(lb * 0.4536).toLocaleString() + " kg)</small></div>" +
+        "<p>At the 2018 national split, about " + Math.round(lb * 0.5).toLocaleString() + " lb would be landfilled, " + Math.round(lb * 0.321).toLocaleString() + " lb recycled or composted and " + Math.round(lb * 0.118).toLocaleString() + " lb burned for energy.</p>" +
+        "<p>This counts all municipal solid waste divided by population, including businesses and institutions, so a real household usually puts out less at the curb.</p>";
+    }
+    $("tr-n").addEventListener("input", run); run();
+  })();
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

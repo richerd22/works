@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Traffic Lights Work: Controllers, Sensors, Crosswalk Buttons | How a City Works</title>
+<meta name="description" content="A traffic light is a small computer in a roadside cabinet, a set of sensors that tell it who is waiting, and a separate safety box that will switch the...">
+<link rel="canonical" href="https://works.cold.fyi/traffic-lights/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b6b3a">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="How Traffic Lights Work: Controllers, Sensors, Crosswalk Buttons | How a City Works"><meta property="og:description" content="A traffic light is a small computer in a roadside cabinet, a set of sensors that tell it who is waiting, and a separate safety box that will switch the...">
+<meta property="og:url" content="https://works.cold.fyi/traffic-lights/"><meta property="og:image" content="https://works.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/overpass-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "How Traffic Lights Work: Controllers, Sensors, Crosswalk Buttons", "description": "A traffic light is a small computer in a roadside cabinet, a set of sensors that tell it who is waiting, and a separate safety box that will switch the...", "url": "https://works.cold.fyi/traffic-lights/", "image": "https://works.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "How a City Works", "url": "https://works.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "How a City Works", "item": "https://works.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "How traffic lights work", "item": "https://works.cold.fyi/traffic-lights/"}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/overpass-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/overpass-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a public-works field manual - highway guide-sign hero, Overpass (a Highway Gothic descendant) for display, APWA utility-locate colors as section colors, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:light;
+  --bg:#f4f2ec; --panel:#fffdf8; --panel2:#f1eee6; --ink:#17191b; --muted:#5a5a55; --line:#d8d3c7;
+  --tape:#b8480c; --tape-ink:#ffffff; --ink-on:#ffffff; --ink-on-y:#17191b; --hot:#c0281b; --cue:#0a5fb4; --sign:#0b6b3a; --sign-ink:#ffffff;
+  --u-red:#c8261c; --u-yel:#e9b10f; --u-org:#e76a12; --u-blu:#1b63c6; --u-grn:#23884a; --u-pur:#7d45bf; --u-pnk:#d94b8c; --u-wht:#8a877f;
+  --s1:var(--u-blu); --s2:var(--u-grn); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pur);
+  --f-display:"Overpass","Highway Gothic","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-display);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- works.cold.fyi overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:-.01em}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{background:var(--sign);color:var(--sign-ink);border-radius:14px;padding:1.1rem 1.4rem 1.2rem;box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 6px #fff;position:relative;margin:.6rem 0 1.2rem;max-width:44rem}
+.sign .shield{position:absolute;right:1.1rem;top:1rem;font:800 .8rem var(--f-display);background:#fff;color:var(--sign);border-radius:6px;padding:.2rem .45rem;letter-spacing:.04em}
+.sign h1{color:#fff;font-weight:800;font-size:clamp(3rem,11vw,6.6rem);line-height:.9;margin:.2rem 0 .2rem}
+.sign h1 .file{color:#fff}
+.sign .exit{font:700 .9rem var(--f-display);letter-spacing:.02em;opacity:.92;display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.sign .exit b{background:#fff;color:var(--sign);border-radius:4px;padding:.05rem .4rem}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:.95rem;transform:none;clip-path:none;border-radius:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.45rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-blu)}.labels li:nth-child(2){--lc:var(--u-red)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-grn)}.labels li:nth-child(5){--lc:var(--u-pur)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.15rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-display);font-weight:800;font-size:.38em;transform:none;clip-path:none;border-radius:5px;color:var(--sci,#fff);background:var(--sc,var(--tape));padding:.22em .45em .12em;vertical-align:.55em}
+.chip-n{color:var(--sci,#fff);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3{font-weight:800}
+.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--sign);color:#fff}
+.seg button[aria-pressed="true"]{color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"],:root[data-theme="dark"] .btn{color:#141617}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"],:root:not([data-theme="light"]) .btn{color:#141617}}
+.gl-list .cat{color:#fff}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .t.wh{fill:#fff}
+.dg .earth{fill:var(--panel2)}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.key{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin:.6rem 0 0;font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.key i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-traffic-lights">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">How a City Works</a> / How traffic lights work</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">How a City Works</a></h2><a href="/primer/"><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/"><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/"><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/" class=on aria-current=page><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 09 of 25 · about 19 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-org);--sci:var(--ink-on)"><h1 class="sec-h1" id="sec-traffic-lights" style="--sc:var(--u-org);--sci:var(--ink-on)"><span class="tape">09</span>How traffic lights work</h1>
+<p class="short"><strong>The short version:</strong> A traffic light is a small computer in a roadside cabinet, a set of sensors that tell it who is waiting, and a separate safety box that will switch the whole intersection to flashing if anything looks wrong. The computer divides time into phases, using a diagram engineers call rings and barriers, so that conflicting movements are never green together. Many city signals run timing plans set from traffic counts and pushed out from a control room; some retune themselves continuously. Whether the crosswalk button does anything depends on where and when you press it.</p>
+<h3>How it changed: from a gas lamp in London to a computer on every corner</h3>
+<p>The first traffic signal stood outside the Houses of Parliament in London, near the House of Commons at Great George Street and Bridge Street.<sup id="fnref-176"><a class="footnote-ref" href="#fn-176">176</a></sup> It was designed by John Peake Knight, a railway signaling engineer, and borrowed the railway's vocabulary: semaphore arms by day, red and green gas lamps by night, worked by hand by a police constable.<sup id="fnref-177"><a class="footnote-ref" href="#fn-177">177</a></sup> Sources disagree on the exact day it went up: Wikipedia gives 9 December 1868 and History Hit gives 10 December 1868.<sup id="fnref-178"><a class="footnote-ref" href="#fn-178">178</a></sup><sup id="fnref2-177"><a class="footnote-ref" href="#fn-177">177</a></sup> It did not last.</p>
+<p>A gas leak caused it to explode in 1869 - Wikipedia dates this to 2 January - and the policeman on duty was badly injured.<sup id="fnref2-176"><a class="footnote-ref" href="#fn-176">176</a></sup><sup id="fnref2-178"><a class="footnote-ref" href="#fn-178">178</a></sup> History Hit says the operator was "reportedly" killed, but the more careful sources say injured.<sup id="fnref3-177"><a class="footnote-ref" href="#fn-177">177</a></sup> The signal was gone by 1870.<sup id="fnref3-176"><a class="footnote-ref" href="#fn-176">176</a></sup></p>
+<p>Electricity brought the idea back. In Salt Lake City, police officer Lester Wire developed an early electric traffic light in 1912.<sup id="fnref3-178"><a class="footnote-ref" href="#fn-178">178</a></sup> On August 5, 1914, Cleveland's safety director Alfred Benesch tested a red and green signal from the American Traffic Signal Company at East 105th Street and Euclid Avenue. Lights about 15 feet (4.5 m) up on four corner poles showed "stop" and "move"; an officer in a booth threw the switches by hand, and bells rang to warn of a change, twice for Euclid and once for East 105th.<sup id="fnref-179"><a class="footnote-ref" href="#fn-179">179</a></sup></p>
+<p>Yellow arrived in Detroit in 1920. William L. Potts (1883-1947), a Detroit police officer, designed the first three-color, four-direction signal, installed at Woodward Avenue and Fort Street.<sup id="fnref-180"><a class="footnote-ref" href="#fn-180">180</a></sup> Earlier lights had only red and green; three colors were standard by the mid-1930s.<sup id="fnref2-180"><a class="footnote-ref" href="#fn-180">180</a></sup></p>
+<p>Linking signals together came almost as early as the signals themselves. Salt Lake City tied six intersections to one manual switch in 1917; in 1922 Houston added automatic timers made by Crouse-Hinds; in 1952 Denver used one computer to control 120 lights; and in 1967 Toronto ran 159 signals from computers that took in vehicle detection.<sup id="fnref4-178"><a class="footnote-ref" href="#fn-178">178</a></sup> Britain trialed automatic signals in Wolverhampton's Princes Square in 1927 and installed its first permanent ones at Park Row and Bond Street in Leeds in March 1928.<sup id="fnref5-178"><a class="footnote-ref" href="#fn-178">178</a></sup></p>
+<h3>Did Garrett Morgan invent the traffic light?</h3>
+<p>No, though he did invent a traffic signal, and the distinction matters. Garrett Morgan, a Black inventor and businessman,<sup id="fnref-181"><a class="footnote-ref" href="#fn-181">181</a></sup> was granted US Patent 1,475,024 for a three-position traffic signal on November 20, 1923.<sup id="fnref6-178"><a class="footnote-ref" href="#fn-178">178</a></sup> His design was a manually operated post with "stop" and "go" arms, cranked by an attendant. Its third position stopped traffic in all directions so the intersection could clear, and he sold the rights to General Electric for $40,000.<sup id="fnref2-181"><a class="footnote-ref" href="#fn-181">181</a></sup><sup id="fnref2-179"><a class="footnote-ref" href="#fn-179">179</a></sup> The Cleveland Police Museum notes that two-way stop-and-go signals already existed when Morgan designed his.<sup id="fnref3-179"><a class="footnote-ref" href="#fn-179">179</a></sup></p>
+<p>So the popular claim that Morgan invented "the traffic light" or "the yellow light" does not hold up: London had a signal in 1868, Salt Lake City and Cleveland had electric ones by 1912 and 1914, and Potts' three-color light dates from 1920. In our reading, the accurate version is still a good story. Morgan patented and commercially licensed a signal with an all-stop position, a feature that resembles the all-red clearance time modern signals still use, and he did it as a Black businessman in 1920s America. He deserves credit for that, not for an invention that predates him.</p>
+<h3>What's in the box on the corner?</h3>
+<p>A signalized intersection has three working parts you can see from the sidewalk:</p>
+<ul>
+<li><strong>Signal heads</strong>: the housings on poles or mast arms that hold the red, yellow and green lights.</li>
+<li><strong>The controller cabinet</strong>: the gray or green metal box at one corner, holding the electronics.</li>
+<li><strong>Detectors and push buttons</strong>: the sensors that tell the cabinet who is waiting.</li>
+</ul>
+<p>Inside the cabinet is the <strong>controller</strong>, the intersection's "brains": a small, ruggedized computer that decides which movements get green and for how long.<sup id="fnref-74"><a class="footnote-ref" href="#fn-74">74</a></sup> Next to it sit <strong>load switches</strong>, which turn the controller's 12-volt DC logic signals into the 120-volt AC power that lights the lamps, plus a <strong>flasher</strong> that produces flashing operation.<sup id="fnref-50"><a class="footnote-ref" href="#fn-50">50</a></sup></p>
+<p>US controllers come from two family trees. NEMA TS 1 (1976) defined basic actuated control so equipment from different makers was interchangeable, and NEMA TS 2 (1992) added a serial data link and defined coordination and preemption. A parallel line ran from the hardware-only Type 170 to Caltrans' Model 2070 (1995), which also defined the processor, operating system and software language. The current <strong>Advanced Transportation Controller (ATC)</strong> family is meant to merge them in an open architecture.<sup id="fnref2-50"><a class="footnote-ref" href="#fn-50">50</a></sup></p>
+<p>The lamps changed around 2000. A paper from that time put LED signals at roughly 80-90% less energy than incandescent bulbs, lasting about 5-10 years instead of about one; about 400,000 LED modules were then installed in the US, out of roughly 11 million signal lamps.<sup id="fnref-182"><a class="footnote-ref" href="#fn-182">182</a></sup> We found no current count of how far LEDs have spread since. (Streetlights went through a similar switch; see <a href="/streetlights/">How streetlights work</a>.)</p>
+<h3>Why do traffic lights flash red?</h3>
+<p>The most important box in the cabinet is the one that does not run the intersection. The <strong>conflict monitor</strong> (in TS 1 cabinets) or <strong>malfunction management unit</strong>, or MMU (in TS 2), is separate hardware that watches the controller's outputs independently.<sup id="fnref2-74"><a class="footnote-ref" href="#fn-74">74</a></sup><sup id="fnref3-50"><a class="footnote-ref" href="#fn-50">50</a></sup> If it ever sees two conflicting movements green at once, or voltages that should not be there, it overrides the controller and puts every signal head into flash.<sup id="fnref3-74"><a class="footnote-ref" href="#fn-74">74</a></sup></p>
+<p>This is the fail-safe: the worst a computer fault should produce is a flashing intersection, never green both ways. In the US, agencies commonly set the flash either to red on every approach, which drivers treat as an all-way stop, or to yellow on the main road and red on the side streets.</p>
+<p>Delaware's state edition of the MUTCD, for example, recommends flashing yellow for the major street and flashing red for the other approaches unless flashing red is used on all of them, and requires every green indication to go dark during flash.<sup id="fnref-183"><a class="footnote-ref" href="#fn-183">183</a></sup> State traffic law gives flashing red the force of a stop: Iowa's code says a flashing circular red means traffic shall stop, then may proceed cautiously while yielding to vehicles not required to stop, and a flashing yellow means proceed with caution.<sup id="fnref-184"><a class="footnote-ref" href="#fn-184">184</a></sup></p>
+<p>Flash is also used on purpose. Many Boston signals flash overnight, when traffic is light.<sup id="fnref3-47"><a class="footnote-ref" href="#fn-47">47</a></sup></p>
+<h3>Phases, rings and barriers, explained without the jargon</h3>
+<p>A signal divides time into <strong>phases</strong>, each a block of time serving a set of movements that can safely go together, such as northbound and southbound through traffic. One full trip through all the phases is the <strong>cycle length</strong>.<sup id="fnref-185"><a class="footnote-ref" href="#fn-185">185</a></sup> Each phase's share of the cycle, including its yellow and all-red clearance time, is its <strong>split</strong>.<sup id="fnref2-185"><a class="footnote-ref" href="#fn-185">185</a></sup></p>
+<p>US engineers draw this with the NEMA <strong>ring-and-barrier</strong> diagram. A <strong>ring</strong> is "a sequence of two or more conflicting movements" timed one after another; a typical controller runs two rings side by side, each with up to four phases.<sup id="fnref-186"><a class="footnote-ref" href="#fn-186">186</a></sup> A <strong>barrier</strong> is a point where the two rings must line up, so that conflicting movements in different rings are never selected and timed together.<sup id="fnref2-186"><a class="footnote-ref" href="#fn-186">186</a></sup></p>
+<p>In plainer words: think of the left side of the barrier as "main street's turn" and the right side as "side street's turn". On the main-street side, ring 1 might serve the southbound left turn and then northbound through traffic, while ring 2 serves the northbound left and then southbound through traffic. Each ring can move at its own pace - a busy left-turn lane can get more time than the opposite one - but both rings have to arrive at the barrier together before the side street gets anything. That is how the controller stays flexible without ever giving a left-turning car a green into oncoming traffic.</p>
+<div class="diagram wide"><div class="dhead">Diagram 6 · How a signal shares green time</div><div class="dscroll"><svg class="dg" viewBox="0 0 720 250" role="img" aria-label="NEMA dual-ring diagram. Ring 1 runs phases 1, 2, then 3, 4; ring 2 runs phases 5, 6, then 7, 8. Phases 1, 2, 5 and 6 serve the main street, 3, 4, 7 and 8 the side street. Both rings must reach the barrier together before the side street gets green."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0 L10 5 L0 10z"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="aha" d="M0 0 L10 5 L0 10z"/></marker></defs><text class="s cap" x="8" y="20" text-anchor="start">NEMA dual ring: two rings run side by side and meet at the barrier</text><text class="t sm" x="8" y="74" text-anchor="start">Ring 1</text><text class="t sm" x="8" y="134" text-anchor="start">Ring 2</text><rect class="bx org" x="80" y="50" width="82" height="44" rx="6"/><text class="t" x="121.0" y="69.0" text-anchor="middle">Phase 1</text><text class="s" x="121.0" y="85.0" text-anchor="middle">main left</text><rect class="bx org" x="170" y="50" width="142" height="44" rx="6"/><text class="t" x="241.0" y="69.0" text-anchor="middle">Phase 2</text><text class="s" x="241.0" y="85.0" text-anchor="middle">main through</text><rect class="bx org" x="334" y="50" width="82" height="44" rx="6"/><text class="t" x="375.0" y="69.0" text-anchor="middle">Phase 3</text><text class="s" x="375.0" y="85.0" text-anchor="middle">side left</text><rect class="bx org" x="424" y="50" width="132" height="44" rx="6"/><text class="t" x="490.0" y="69.0" text-anchor="middle">Phase 4</text><text class="s" x="490.0" y="85.0" text-anchor="middle">side through</text><rect class="bx " x="80" y="110" width="72" height="44" rx="6"/><text class="t" x="116.0" y="129.0" text-anchor="middle">Phase 5</text><text class="s" x="116.0" y="145.0" text-anchor="middle">main left</text><rect class="bx " x="160" y="110" width="152" height="44" rx="6"/><text class="t" x="236.0" y="129.0" text-anchor="middle">Phase 6</text><text class="s" x="236.0" y="145.0" text-anchor="middle">main through</text><rect class="bx " x="334" y="110" width="92" height="44" rx="6"/><text class="t" x="380.0" y="129.0" text-anchor="middle">Phase 7</text><text class="s" x="380.0" y="145.0" text-anchor="middle">side left</text><rect class="bx " x="434" y="110" width="122" height="44" rx="6"/><text class="t" x="495.0" y="129.0" text-anchor="middle">Phase 8</text><text class="s" x="495.0" y="145.0" text-anchor="middle">side through</text><line class="sep" x1="326" y1="38" x2="326" y2="164"/><text class="s hot" x="326" y="180" text-anchor="middle">barrier</text><text class="s" x="200" y="200" text-anchor="middle">main street moves</text><text class="s" x="500" y="200" text-anchor="middle">side street moves</text><text class="s xs" x="8" y="226" text-anchor="start">Phase 1 can be shorter or longer than phase 5, but the side street gets nothing</text><text class="s xs" x="8" y="240" text-anchor="start">until both rings reach the barrier. Conflicting movements are never green together.</text></svg></div></div>
+
+<p>There are two broad ways to run the clock:</p>
+<ul>
+<li><strong>Pretimed (fixed-time) control</strong> serves every phase every cycle for a set time regardless of traffic. It is typical in closely spaced downtown grids.<sup id="fnref3-186"><a class="footnote-ref" href="#fn-186">186</a></sup></li>
+<li><strong>Actuated control</strong> uses detectors to decide whether a phase is served and how long it lasts. Fully actuated signals have detection on every approach.<sup id="fnref4-186"><a class="footnote-ref" href="#fn-186">186</a></sup> Many real intersections mix the two: a coordinated main street, with side streets and left arrows served only on demand.</li>
+</ul>
+<h3>What are the cut lines in the pavement at a red light?</h3>
+<p>Those rectangles, diamonds or circles of sealed saw cuts near the stop line are usually <strong>inductive loops</strong>. Wire is laid in slots sawed into the pavement and sealed over.<sup id="fnref-187"><a class="footnote-ref" href="#fn-187">187</a></sup> When a vehicle sits above the loop, its metal reduces the loop's inductance, which raises the frequency of an oscillator in the detector electronics; the detector card in the cabinet reads that change as a "call".<sup id="fnref2-187"><a class="footnote-ref" href="#fn-187">187</a></sup></p>
+<p>Agencies also use other sensors, each with trade-offs:<sup id="fnref3-187"><a class="footnote-ref" href="#fn-187">187</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Detector</th>
+<th>Where it sits</th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Magnetometer</td>
+<td>Small core in pavement</td>
+<td>Insensitive to weather</td>
+<td>Still needs a pavement cut</td>
+</tr>
+<tr>
+<td>Microwave radar</td>
+<td>Pole or mast arm</td>
+<td>Largely insensitive to weather; measures speed</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Passive infrared</td>
+<td>Pole or mast arm</td>
+<td>No pavement work</td>
+<td>Degraded by heavy rain, snow and fog</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Pole or mast arm</td>
+<td>Many zones; easy to reconfigure</td>
+<td>Affected by weather, shadows, lighting and blocked views</td>
+</tr>
+</tbody>
+</table></div>
+<p>A loop's weak point is anything with little metal. A bicycle may not register on a loop that is not set sensitively enough, which is why people on bikes sometimes wait at a red that never changes, and why some cities paint a symbol showing where to stop a bike over the loop.</p>
+<h3>Do crosswalk buttons actually work?</h3>
+<p>Sometimes. In busy downtowns, many signals use <strong>pedestrian recall</strong>: the walk signal comes up automatically every cycle, so the button has no effect on timing. Boston uses recall in its busy pedestrian areas.<sup id="fnref4-47"><a class="footnote-ref" href="#fn-47">47</a></sup> In 2017 the Boston Globe reported that "the vast majority" of buttons in Boston's downtown neighborhoods do nothing by design; some are inactive by day but work overnight, buttons outside downtown generally work, and the dead ones remain because removing them costs money.<sup id="fnref-188"><a class="footnote-ref" href="#fn-188">188</a></sup> The same report said New York City had removed several hundred nonfunctioning buttons in areas under reconstruction but kept others.<sup id="fnref2-188"><a class="footnote-ref" href="#fn-188">188</a></sup></p>
+<p>In 2020 Brookline, Massachusetts deactivated push buttons at 55 signals, and Cambridge and Arlington followed; Providence made its change permanent.<sup id="fnref-189"><a class="footnote-ref" href="#fn-189">189</a></sup> MassDOT kept the buttons working at its roughly 1,400 pedestrian signals, and Boston pointed out that many downtown signals already gave the walk automatically.<sup id="fnref2-189"><a class="footnote-ref" href="#fn-189">189</a></sup></p>
+<p>In a dense core during the day, the button often does nothing because the walk is already coming. In suburbs, at night, and at mid-block crossings, it usually does call the walk signal. On an accessible signal, pressing the button can still matter even where timing is automatic, because it can trigger the audible and vibrating cues described below. Countdown timers, which spread in the 1990s, are now required in the US on new or upgraded signals at wider crossings; US rules prohibit countdowns for drivers.<sup id="fnref7-178"><a class="footnote-ref" href="#fn-178">178</a></sup></p>
+<h3>Leading pedestrian intervals and accessible signals</h3>
+<p>A <strong>leading pedestrian interval (LPI)</strong> is "a brief (3-7 second) advance WALK indication" before parallel traffic gets its green.<sup id="fnref-190"><a class="footnote-ref" href="#fn-190">190</a></sup> The head start puts people a few steps into the crosswalk, where turning drivers can see them, before cars move. FHWA studies cited by Caltrans show a 13% reduction in pedestrian-vehicle crashes at intersections that use them.<sup id="fnref2-190"><a class="footnote-ref" href="#fn-190">190</a></sup></p>
+<p>An <strong>accessible pedestrian signal (APS)</strong> is a crossing device for blind and low-vision people. Boston's specification shows what one does: a locator tone about 0.15 seconds long, repeating every second and adjusting its volume to street noise, so a person can find the button; a button that vibrates during the walk; a raised tactile arrow aligned with the crosswalk; and a spoken message. The messages can be programmed over Bluetooth.<sup id="fnref-191"><a class="footnote-ref" href="#fn-191">191</a></sup></p>
+<p>In <em>American Council of the Blind v. City of New York</em>, a federal court ordered New York City to install APS at 10,000 intersections within 10 years and at all signalized intersections by 2036.<sup id="fnref-192"><a class="footnote-ref" href="#fn-192">192</a></sup> At the time, about 749 intersections, about 5%, had them, out of more than 13,200 signalized intersections; the same advocates' page also gives 13,430.<sup id="fnref2-192"><a class="footnote-ref" href="#fn-192">192</a></sup></p>
+<h3>How do green waves work?</h3>
+<p>A <strong>green wave</strong>, which engineers call progression, is a string of signals timed so that a vehicle at the planned speed meets green after green. Three numbers make it work.<sup id="fnref3-185"><a class="footnote-ref" href="#fn-185">185</a></sup></p>
+<ul>
+<li>The signals must share a <strong>cycle length</strong>, or a multiple of it (a quiet intersection can run two cycles for each one at a busy neighbor, which is called double-cycling).</li>
+<li>Each signal has an <strong>offset</strong>: the time between a master clock reference and the start of its own green, in seconds or as a percent of the cycle.</li>
+<li>The resulting <strong>bandwidth</strong> is the window of time in which vehicles can travel through the whole system at the set speed.</li>
+</ul>
+<p>FHWA's 2008 timing manual prefers that cycles at conventional four-leg intersections "not exceed 120 seconds".<sup id="fnref4-185"><a class="footnote-ref" href="#fn-185">185</a></sup> Plans are usually built from a software model of the corridor.<sup id="fnref4-74"><a class="footnote-ref" href="#fn-74">74</a></sup> A green wave is easiest on a one-way street. On a two-way street with uneven block spacing, the timing usually has to favor one direction, often inbound in the morning and outbound in the evening. Many city signals run a few <strong>time-of-day plans</strong> (morning, midday, evening, overnight) switched by the clock.</p>
+<h3>Adaptive systems: signals that retune themselves</h3>
+<p><strong>Adaptive signal control</strong> goes a step further and recalculates splits, cycle lengths and offsets continuously from live detector data. The two best-known systems date from the 1970s:</p>
+<ul>
+<li><strong>SCATS</strong>, developed in 1975 by the New South Wales Department of Main Roads in Sydney, was "one of the first adaptive control systems to be available commercially". Its operator says it now runs at more than 65,000 intersections in 218 cities in 33 countries.<sup id="fnref-193"><a class="footnote-ref" href="#fn-193">193</a></sup></li>
+<li><strong>SCOOT</strong> (Split Cycle Offset Optimisation Technique) was developed by the UK's Transport Research Laboratory in 1979 for the Department of Transport. It uses loop data to adjust splits, cycle times and offsets by region, with about a 15% improvement over fixed timing.<sup id="fnref-194"><a class="footnote-ref" href="#fn-194">194</a></sup> Transport for London is replacing SCOOT with a newer system called FUSION, targeting 500 sites by 2025/26 and 4,350 by 2030/31.<sup id="fnref2-194"><a class="footnote-ref" href="#fn-194">194</a></sup></li>
+</ul>
+<p>Adaptive systems are only as good as their detectors and their maintenance. They tend to help most where traffic is variable and hard to predict - around stadiums, malls or highway ramps - and add less where a well-tuned time-of-day plan already fits the traffic.</p>
+<h3>Preemption and bus priority</h3>
+<p><strong>Preemption</strong> interrupts the normal cycle to give an immediate green to an emergency vehicle (the dispatch side is in <a href="/911/">From fire alarm boxes to 911</a>) or to clear traffic off a railroad crossing, while showing red to conflicting movements.<sup id="fnref5-74"><a class="footnote-ref" href="#fn-74">74</a></sup> One early documented case: in Houston in 1991-92, emitters on emergency vehicles that triggered signals within a quarter mile (400 m) at 22 intersections cut average emergency travel time by 16% and 23% in two fire districts.<sup id="fnref-195"><a class="footnote-ref" href="#fn-195">195</a></sup> The cost is that a preempted signal falls out of step with its neighbors and needs time to rejoin the green wave.</p>
+<p><strong>Transit signal priority (TSP)</strong> is gentler. The controller holds a green a few seconds longer or cuts a red a few seconds shorter for an approaching bus, staying within its normal pattern. In Boston, the city and the MBTA started a pilot in July 2024 at three intersections on Brighton Avenue (at Harvard, Linden and Allston streets) for bus routes 57 and 66. Bus waiting time at red lights fell 21%, and the two agencies announced an expansion.<sup id="fnref-94"><a class="footnote-ref" href="#fn-94">94</a></sup> (More on the buses themselves in <a href="/transit/">How the subway and the bus actually run</a>.)</p>
+<h3>Right turn on red</h3>
+<p>In most of the US, a driver may turn right on red after stopping unless a sign says otherwise. That became national rule because of the 1970s energy crisis: the Energy Policy and Conservation Act of 1975 effectively required states to allow <strong>right turn on red (RTOR)</strong> to keep federal energy assistance, and a 1992 amendment extended the idea to left turns on red from a one-way street onto another one-way street.<sup id="fnref-196"><a class="footnote-ref" href="#fn-196">196</a></sup> New York City has long prohibited it more broadly.<sup id="fnref2-196"><a class="footnote-ref" href="#fn-196">196</a></sup></p>
+<p>The safety cost appeared quickly. A 1982 study in the <em>Journal of Safety Research</em> found that after mid-1970s adoption, pedestrian crashes involving right-turning vehicles rose 48% in New York State, 107% in Wisconsin, 57% in Ohio and 82% in New Orleans, and bicycle crashes of that type rose 72-82%. Drivers look left for a gap in traffic and miss people approaching from the right. Those crashes were 1-3% of all pedestrian and bicycle crashes.<sup id="fnref-197"><a class="footnote-ref" href="#fn-197">197</a></sup></p>
+<p>The debate reopened in the 2020s. A December 2024 Mineta Transportation Institute study found that most drivers roll through rather than stop, and recommended that states let cities ban RTOR by default and allow it only at selected intersections.<sup id="fnref-198"><a class="footnote-ref" href="#fn-198">198</a></sup> New York City mostly prohibits it, except in parts of Staten Island.<sup id="fnref2-198"><a class="footnote-ref" href="#fn-198">198</a></sup> The rule is less common elsewhere: in much of Europe, turning on a red signal is not allowed unless a specific sign or arrow permits it.</p>
+<h3>Roundabouts: the intersection without a light</h3>
+<p>Sometimes the best signal is no signal. In a modern <strong>roundabout</strong>, entering traffic yields to traffic already circulating, at low speed. US studies of intersections converted from signals or stop signs show injury crashes down 72-80% and all crashes down 35-47%; at high-speed rural stop-controlled sites, injury crashes fell 85%.<sup id="fnref-199"><a class="footnote-ref" href="#fn-199">199</a></sup> The Insurance Institute for Highway Safety (IIHS) estimates that converting 10% of US signalized intersections would have prevented 289 fatal crashes in 2024.<sup id="fnref2-199"><a class="footnote-ref" href="#fn-199">199</a></sup> The first modern US roundabouts were built in Nevada in 1990.<sup id="fnref3-199"><a class="footnote-ref" href="#fn-199">199</a></sup></p>
+<p>The gains are not automatic. Two-lane roundabouts show smaller reductions and sometimes increases at first; in Washington State, crashes at two-lane roundabouts fell about 9% per year as drivers got used to them. Drivers failed to yield to pedestrians two to three times more often at multilane roundabouts than at single-lane ones.<sup id="fnref4-199"><a class="footnote-ref" href="#fn-199">199</a></sup> The safety gain comes from low speed and from removing right-angle and head-on left-turn collisions.</p>
+<p>An FHWA safety team handout counts 32 vehicle conflict points at a four-way signalized intersection and 8 at a roundabout, which it describes as 75% fewer.<sup id="fnref-200"><a class="footnote-ref" href="#fn-200">200</a></sup></p>
+<h3>Red light cameras: what the evidence says and who disputes it</h3>
+<p>Red light cameras photograph vehicles entering an intersection after the light has turned red, for ticketing. According to IIHS, 1,119 people were killed in red-light-running crashes in the US in 2024, about half of them pedestrians, cyclists or people in other vehicles.<sup id="fnref-201"><a class="footnote-ref" href="#fn-201">201</a></sup></p>
+<p>The research IIHS summarizes points toward fewer serious crashes, with a trade-off:<sup id="fnref2-201"><a class="footnote-ref" href="#fn-201">201</a></sup></p>
+<ul>
+<li>Large US cities with cameras had a 21% lower fatal red-light-running crash rate and a 14% lower rate of all fatal crashes at signalized intersections (Hu and Cicchino, 2017). In 14 cities that turned cameras off between 2010 and 2014, fatal red-light-running crash rates were 30% higher than expected.</li>
+<li>A seven-city FHWA-sponsored study found right-angle crashes fell 25% while rear-end crashes rose 15%; it judged the net economic effect positive because rear-end crashes tend to be less severe.</li>
+<li>A Campbell Collaboration review of 38 studies (Cohn and others, 2020) estimated 20% fewer injury crashes and 29% fewer right-angle injury crashes; a 2025 update by Hu and Cicchino gave 19%.</li>
+</ul>
+<p>The number of US communities with camera programs has fallen since 2012, to 351 in 2025.<sup id="fnref3-201"><a class="footnote-ref" href="#fn-201">201</a></sup> IIHS is funded by insurers and supports camera enforcement. Opponents argue that longer yellow times achieve similar safety gains and that some programs are run for revenue. We have not reviewed their studies here, so we report the argument without weighing it.</p>
+<p>An earlier federal study gives a more mixed picture. A 2005 FHWA evaluation of 132 camera sites in seven US jurisdictions found right-angle crashes fell 24.6% while rear-end crashes rose 14.9%, and concluded the cameras gave "a modest aggregate crash-cost benefit" of about $39,000 to $50,000 per site per year.<sup id="fnref-202"><a class="footnote-ref" href="#fn-202">202</a></sup></p>
+<h3>Inside the traffic management center</h3>
+<p>Many cities run their signals from a <strong>traffic management center (TMC)</strong>, a control room with camera feeds where engineers watch traffic, adjust timing and push plans out to the field. Central systems talk to field equipment using <strong>NTCIP</strong> (National Transportation Communications for ITS Protocol), a family of standards developed since 1996 by the Institute of Transportation Engineers (ITE), AASHTO and NEMA with the US Department of Transportation. NTCIP 1202 defines how a central station controls and monitors actuated signal controllers and their detectors.<sup id="fnref-203"><a class="footnote-ref" href="#fn-203">203</a></sup></p>
+<p>When the link to the center fails, a signal does not go dark; it keeps running its own local timing. A Boston traffic engineer described what that means: "it's basically running free, out of sync with the rest of the signals in that corridor".<sup id="fnref5-47"><a class="footnote-ref" href="#fn-47">47</a></sup></p>
+<h3>In Boston</h3>
+<p>The Boston Transportation Department (BTD) runs the city's signals from its Traffic Management Center on the seventh floor of City Hall.<sup id="fnref6-47"><a class="footnote-ref" href="#fn-47">47</a></sup> In fiscal year 2016, BTD operated 854 signals, 557 of them (about 65%) connected to the center, with about 87% online on average. Engineers built timing plans in Synchro software.<sup id="fnref-204"><a class="footnote-ref" href="#fn-204">204</a></sup> By 2020 the city had "almost 900 traffic signals", 699 on the central computer system, more than 300 BTD cameras and access to about 500 more from police and MassDOT.<sup id="fnref7-47"><a class="footnote-ref" href="#fn-47">47</a></sup> State agencies also run signals on their own roads inside the city, so BTD's count does not cover every signal in Boston.</p>
+<p>GBH's 2020 look inside the room described two to three engineers watching during rush hours, four default time-of-day plans (morning, off-peak, evening and overnight), a detailed survey of each signal every five years, and many signals flashing overnight.<sup id="fnref8-47"><a class="footnote-ref" href="#fn-47">47</a></sup> An adaptive test was then planned for 47 signals in the Seaport.<sup id="fnref9-47"><a class="footnote-ref" href="#fn-47">47</a></sup></p>
+<p>A January 2018 Boston 25 News report said the state was seeking about $5 million to test the system, which could cover as many as 39 intersections.<sup id="fnref-205"><a class="footnote-ref" href="#fn-205">205</a></sup> The city's Smart Streets page later listed the Seaport adaptive signals network, planned with MassDOT, as "in design," with no intersection count.<sup id="fnref-206"><a class="footnote-ref" href="#fn-206">206</a></sup> We did not find a report that it has gone live.</p>
+<p>Newer layers include the MBTA bus priority pilot on Brighton Avenue<sup id="fnref2-94"><a class="footnote-ref" href="#fn-94">94</a></sup> and Google's Project Green Light, which had expanded to 114 Boston intersections by May 2025.<sup id="fnref-207"><a class="footnote-ref" href="#fn-207">207</a></sup></p>
+<h3>What's changing now (2026)</h3>
+<p>Three changes are reshaping US signals, all incremental.</p>
+<p><strong>A new rulebook.</strong> The <strong>MUTCD</strong> (Manual on Uniform Traffic Control Devices), the federal rulebook for signals, signs and markings, was reissued as the 11th edition with a final rule published December 19, 2023 and effective January 18, 2024. States had until January 18, 2026 to adopt it, and Revision 1 was published and took effect March 5, 2026.<sup id="fnref-208"><a class="footnote-ref" href="#fn-208">208</a></sup></p>
+<p><strong>Signals that talk to cars.</strong> USDOT's National V2X Deployment Plan, released in August 2024, set a short-term goal of vehicle-to-everything (<strong>V2X</strong>) radios at 25% of signalized intersections in the 75 largest metro areas by 2028, and nationwide deployment in the 5.895-5.925 GHz band by 2036, according to trade press coverage.<sup id="fnref-98"><a class="footnote-ref" href="#fn-98">98</a></sup> The key message is <strong>SPaT</strong> (signal phase and timing), which tells a connected vehicle which light is showing and when it will change. NTCIP 1202 version 4, in ballot in 2025, adds support for passing that timing data from controllers to roadside radios, including new concepts such as an "Assured Green Period", along with stronger network security.<sup id="fnref2-203"><a class="footnote-ref" href="#fn-203">203</a></sup></p>
+<p><strong>AI-suggested timing.</strong> Google's Project Green Light, launched in 2023, was active in 18 cities on four continents by May 2025. It uses AI and Google Maps driving trends to recommend timing changes, which city engineers can apply "in as little as five minutes". Google reports early results of up to 30% fewer stops and up to 10% lower emissions at intersections, as global figures.<sup id="fnref2-207"><a class="footnote-ref" href="#fn-207">207</a></sup> These are company-reported, best-case numbers; we found no independent evaluation. The system advises human engineers rather than running signals itself.</p>
+<h3>How traffic lights differ around the world</h3>
+<p>Red for stop and green for go are near universal; the details are not.</p>
+<ul>
+<li><strong>Britain</strong> shows red and amber together before green. In the UK Highway Code, "RED AND AMBER also means 'Stop'": do not move off until green. Amber alone means stop at the line unless you are too close to stop safely.<sup id="fnref-209"><a class="footnote-ref" href="#fn-209">209</a></sup> US signals go straight from red to green.</li>
+<li><strong>Japan</strong> uses a deliberately bluish green. Old Japanese used the word <em>ao</em> for both blue and green, and the go light is officially <em>ao</em>. The commonly reported account is that in 1973 the government decreed the bluest shade of green allowed, so the lights still read as "go" internationally.<sup id="fnref-210"><a class="footnote-ref" href="#fn-210">210</a></sup> Japan, like the US, has not signed the 1968 Vienna Convention on Road Signs and Signals.<sup id="fnref2-210"><a class="footnote-ref" href="#fn-210">210</a></sup></li>
+<li><strong>Berlin</strong> kept East Germany's walking man. The <strong>Ampelmännchen</strong> was designed by traffic psychologist Karl Peglau on a 1961 commission from the East German transport ministry and debuted in East Berlin in 1969. After reunification, officials planned to replace it; a "Committee to Save the Ampelmännchen" won the right to keep it in 1997, and it has been a registered trademark since then.<sup id="fnref-211"><a class="footnote-ref" href="#fn-211">211</a></sup></li>
+<li><strong>Turning on red</strong> is far more common in the US than in much of Europe, as described above; New York City is the large US exception.<sup id="fnref3-196"><a class="footnote-ref" href="#fn-196">196</a></sup></li>
+</ul>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=How%20a%20City%20Works%20correction%3A%20How%20traffic%20lights%20work">Report an error in this section</a></p></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/streetlights/"><span>Previous · 08</span>How streetlights work, from gas lamps to LEDs</a><a class="next" href="/transit/"><span>Next · 10</span>How the subway and the bus actually run</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">41 of the guide's 379 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-47" value="47">
+<p>GBH News: A look at Boston&#x27;s traffic signal system (Jan 15, 2020) - <a href="https://www.wgbh.org/news/local/2020-01-15/a-look-at-bostons-traffic-signal-system" rel="noopener" target="_blank">wgbh.org</a>&#160;<a class="footnote-backref" href="#fnref-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref2-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref3-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref4-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref5-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref6-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref7-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref8-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref9-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref10-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref11-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref12-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref13-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref14-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref15-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref16-47" title="Jump back to footnote 47 in the text">↩</a><a class="footnote-backref" href="#fnref17-47" title="Jump back to footnote 47 in the text">↩</a></p>
+</li><li id="fn-50" value="50">
+<p>US Access Board: Interfacing APS with Traffic Signal Control Equipment, Appendix A - <a href="https://www.access-board.gov/research/prow/interfacing-aps/appendix-a/" rel="noopener" target="_blank">access-board.gov</a>&#160;<a class="footnote-backref" href="#fnref-50" title="Jump back to footnote 50 in the text">↩</a><a class="footnote-backref" href="#fnref2-50" title="Jump back to footnote 50 in the text">↩</a><a class="footnote-backref" href="#fnref3-50" title="Jump back to footnote 50 in the text">↩</a><a class="footnote-backref" href="#fnref4-50" title="Jump back to footnote 50 in the text">↩</a><a class="footnote-backref" href="#fnref5-50" title="Jump back to footnote 50 in the text">↩</a></p>
+</li><li id="fn-74" value="74">
+<p>Mid-America Regional Council: Traffic Signal Basics (PDF) - <a href="https://www.marc.org/sites/default/files/2023-03/OGL-traffic-signal-basics.pdf" rel="noopener" target="_blank">marc.org</a>&#160;<a class="footnote-backref" href="#fnref-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref2-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref3-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref4-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref5-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref6-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref7-74" title="Jump back to footnote 74 in the text">↩</a><a class="footnote-backref" href="#fnref8-74" title="Jump back to footnote 74 in the text">↩</a></p>
+</li><li id="fn-94" value="94">
+<p>WBUR: MBTA transit signal priority (Feb 3, 2025) - <a href="https://www.wbur.org/news/2025/02/03/mbta-boston-buses-transit-signal-priority-technology-newsletter" rel="noopener" target="_blank">wbur.org</a>&#160;<a class="footnote-backref" href="#fnref-94" title="Jump back to footnote 94 in the text">↩</a><a class="footnote-backref" href="#fnref2-94" title="Jump back to footnote 94 in the text">↩</a><a class="footnote-backref" href="#fnref3-94" title="Jump back to footnote 94 in the text">↩</a></p>
+</li><li id="fn-98" value="98">
+<p>RCR Wireless: DOT releases national V2X plan (Aug 19, 2024) - <a href="https://rcrwireless.com/20240819/policy/dot-releases-national-v2x-plan" rel="noopener" target="_blank">rcrwireless.com</a>&#160;<a class="footnote-backref" href="#fnref-98" title="Jump back to footnote 98 in the text">↩</a><a class="footnote-backref" href="#fnref2-98" title="Jump back to footnote 98 in the text">↩</a></p>
+</li><li id="fn-176" value="176">
+<p>Grace&#x27;s Guide: John Peake Knight - <a href="https://www.gracesguide.co.uk/John_Peake_Knight" rel="noopener" target="_blank">gracesguide.co.uk</a>&#160;<a class="footnote-backref" href="#fnref-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref2-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref3-176" title="Jump back to footnote 176 in the text">↩</a></p>
+</li><li id="fn-177" value="177">
+<p>History Hit: Where Were the World&#x27;s First Traffic Lights? - <a href="https://www.historyhit.com/1868-first-traffic-light/" rel="noopener" target="_blank">historyhit.com</a>&#160;<a class="footnote-backref" href="#fnref-177" title="Jump back to footnote 177 in the text">↩</a><a class="footnote-backref" href="#fnref2-177" title="Jump back to footnote 177 in the text">↩</a><a class="footnote-backref" href="#fnref3-177" title="Jump back to footnote 177 in the text">↩</a></p>
+</li><li id="fn-178" value="178">
+<p>Wikipedia: History of traffic lights - <a href="https://en.wikipedia.org/wiki/History_of_traffic_lights" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-178" title="Jump back to footnote 178 in the text">↩</a><a class="footnote-backref" href="#fnref2-178" title="Jump back to footnote 178 in the text">↩</a><a class="footnote-backref" href="#fnref3-178" title="Jump back to footnote 178 in the text">↩</a><a class="footnote-backref" href="#fnref4-178" title="Jump back to footnote 178 in the text">↩</a><a class="footnote-backref" href="#fnref5-178" title="Jump back to footnote 178 in the text">↩</a><a class="footnote-backref" href="#fnref6-178" title="Jump back to footnote 178 in the text">↩</a><a class="footnote-backref" href="#fnref7-178" title="Jump back to footnote 178 in the text">↩</a></p>
+</li><li id="fn-179" value="179">
+<p>Cleveland Police Museum: Early Electric Traffic Signals - <a href="https://www.clevelandpolicemuseum.org/historical/early-electric-traffic-signals/" rel="noopener" target="_blank">clevelandpolicemuseum.org</a>&#160;<a class="footnote-backref" href="#fnref-179" title="Jump back to footnote 179 in the text">↩</a><a class="footnote-backref" href="#fnref2-179" title="Jump back to footnote 179 in the text">↩</a><a class="footnote-backref" href="#fnref3-179" title="Jump back to footnote 179 in the text">↩</a></p>
+</li><li id="fn-180" value="180">
+<p>The Henry Ford: First Tri-Color, Four-Directional Traffic Signal, 1920 - <a href="https://www.thehenryford.org/collections/explore/artifact/227457" rel="noopener" target="_blank">thehenryford.org</a>&#160;<a class="footnote-backref" href="#fnref-180" title="Jump back to footnote 180 in the text">↩</a><a class="footnote-backref" href="#fnref2-180" title="Jump back to footnote 180 in the text">↩</a></p>
+</li><li id="fn-181" value="181">
+<p>Wikipedia: Garrett Morgan - <a href="https://en.wikipedia.org/wiki/Garrett_Morgan" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-181" title="Jump back to footnote 181 in the text">↩</a><a class="footnote-backref" href="#fnref2-181" title="Jump back to footnote 181 in the text">↩</a></p>
+</li><li id="fn-182" value="182">
+<p>ACEEE: LED Traffic Lights: Signaling a Global Transformation (PDF, 2000) - <a href="https://aceee.org/files/proceedings/2000/data/papers/SS00_Panel6_Paper34.pdf" rel="noopener" target="_blank">aceee.org</a>&#160;<a class="footnote-backref" href="#fnref-182" title="Jump back to footnote 182 in the text">↩</a></p>
+</li><li id="fn-183" value="183">
+<p>Delaware Administrative Code (via Justia): Delaware MUTCD Section 4D.30 Flashing Operation of Traffic Control Signals - <a href="https://regulations.justia.com/states/delaware/title-2/2000/2400/2402/part-4/chapter-4d/section-4d-30" rel="noopener" target="_blank">regulations.justia.com</a>&#160;<a class="footnote-backref" href="#fnref-183" title="Jump back to footnote 183 in the text">↩</a></p>
+</li><li id="fn-184" value="184">
+<p>Iowa Legislature: Iowa Code 321.257 Official traffic control signal (PDF) - <a href="https://www.legis.iowa.gov/docs/code/2012/321.257.pdf" rel="noopener" target="_blank">legis.iowa.gov</a>&#160;<a class="footnote-backref" href="#fnref-184" title="Jump back to footnote 184 in the text">↩</a></p>
+</li><li id="fn-185" value="185">
+<p>FHWA: Traffic Signal Timing Manual (2008), Chapter 6 Coordination - <a href="https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter6.htm" rel="noopener" target="_blank">ops.fhwa.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-185" title="Jump back to footnote 185 in the text">↩</a><a class="footnote-backref" href="#fnref2-185" title="Jump back to footnote 185 in the text">↩</a><a class="footnote-backref" href="#fnref3-185" title="Jump back to footnote 185 in the text">↩</a><a class="footnote-backref" href="#fnref4-185" title="Jump back to footnote 185 in the text">↩</a></p>
+</li><li id="fn-186" value="186">
+<p>National Academies Press: NCHRP Report 812, Signal Timing Manual, 2nd ed., Appendix A Glossary - <a href="https://nap.nationalacademies.org/read/22097/chapter/14" rel="noopener" target="_blank">nap.nationalacademies.org</a>&#160;<a class="footnote-backref" href="#fnref-186" title="Jump back to footnote 186 in the text">↩</a><a class="footnote-backref" href="#fnref2-186" title="Jump back to footnote 186 in the text">↩</a><a class="footnote-backref" href="#fnref3-186" title="Jump back to footnote 186 in the text">↩</a><a class="footnote-backref" href="#fnref4-186" title="Jump back to footnote 186 in the text">↩</a></p>
+</li><li id="fn-187" value="187">
+<p>FHWA: Traffic Detector Handbook, 3rd ed., Vol. I, Chapter 1 - <a href="https://www.fhwa.dot.gov/publications/research/operations/its/06108/01.cfm" rel="noopener" target="_blank">fhwa.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-187" title="Jump back to footnote 187 in the text">↩</a><a class="footnote-backref" href="#fnref2-187" title="Jump back to footnote 187 in the text">↩</a><a class="footnote-backref" href="#fnref3-187" title="Jump back to footnote 187 in the text">↩</a></p>
+</li><li id="fn-188" value="188">
+<p>Boston Globe: Go ahead and press that pedestrian button - it makes you feel good (July 24, 2017) - <a href="https://www.bostonglobe.com/metro/2017/07/24/ahead-and-press-that-pedestrian-button-makes-you-feel-good/1krGOm2CfeZBvIkEkNm5rL/story.html" rel="noopener" target="_blank">bostonglobe.com</a>&#160;<a class="footnote-backref" href="#fnref-188" title="Jump back to footnote 188 in the text">↩</a><a class="footnote-backref" href="#fnref2-188" title="Jump back to footnote 188 in the text">↩</a><a class="footnote-backref" href="#fnref3-188" title="Jump back to footnote 188 in the text">↩</a></p>
+</li><li id="fn-189" value="189">
+<p>Streetsblog Mass: Mixed Signals - Beg Buttons and the Pandemic (Apr 21, 2020) - <a href="https://mass.streetsblog.org/2020/04/21/mixed-signals-beg-buttons-and-the-pandemic" rel="noopener" target="_blank">mass.streetsblog.org</a>&#160;<a class="footnote-backref" href="#fnref-189" title="Jump back to footnote 189 in the text">↩</a><a class="footnote-backref" href="#fnref2-189" title="Jump back to footnote 189 in the text">↩</a></p>
+</li><li id="fn-190" value="190">
+<p>Caltrans: Traffic Safety Bulletin 21-01, Leading Pedestrian Interval guidance (PDF, 2021) - <a href="https://dot.ca.gov/-/media/dot-media/programs/safety-programs/documents/policy/21-01-lpi-guidance-and-memo-090221-a11y.pdf" rel="noopener" target="_blank">dot.ca.gov</a>&#160;<a class="footnote-backref" href="#fnref-190" title="Jump back to footnote 190 in the text">↩</a><a class="footnote-backref" href="#fnref2-190" title="Jump back to footnote 190 in the text">↩</a></p>
+</li><li id="fn-191" value="191">
+<p>City of Boston: Accessible pedestrian signal pushbutton specification (PDF, May 16, 2019) - <a href="https://www.boston.gov/sites/default/files/document-file-05-2019/aps_pushbutton_may_16_2019.pdf" rel="noopener" target="_blank">boston.gov</a>&#160;<a class="footnote-backref" href="#fnref-191" title="Jump back to footnote 191 in the text">↩</a><a class="footnote-backref" href="#fnref2-191" title="Jump back to footnote 191 in the text">↩</a></p>
+</li><li id="fn-192" value="192">
+<p>Disability Rights Advocates: Federal Court Orders New York City to Install Thousands of Accessible Crosswalk Signals - <a href="https://dralegal.org/featured/federal-court-orders-new-york-city-to-install-thousands-of-accessible-crosswalk-signals-over-the-next-10-years/" rel="noopener" target="_blank">dralegal.org</a>&#160;<a class="footnote-backref" href="#fnref-192" title="Jump back to footnote 192 in the text">↩</a><a class="footnote-backref" href="#fnref2-192" title="Jump back to footnote 192 in the text">↩</a></p>
+</li><li id="fn-193" value="193">
+<p>SCATS (Transport for NSW): Who We Are - <a href="https://scats.nsw.gov.au/about-us" rel="noopener" target="_blank">scats.nsw.gov.au</a>&#160;<a class="footnote-backref" href="#fnref-193" title="Jump back to footnote 193 in the text">↩</a></p>
+</li><li id="fn-194" value="194">
+<p>Wikipedia: Split Cycle Offset Optimisation Technique - <a href="https://en.wikipedia.org/wiki/Split_Cycle_Offset_Optimisation_Technique" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-194" title="Jump back to footnote 194 in the text">↩</a><a class="footnote-backref" href="#fnref2-194" title="Jump back to footnote 194 in the text">↩</a></p>
+</li><li id="fn-195" value="195">
+<p>USDOT ITS Knowledge Resources: Houston emergency vehicle preemption - <a href="https://www.itskrs.its.dot.gov/2002-b00227" rel="noopener" target="_blank">itskrs.its.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-195" title="Jump back to footnote 195 in the text">↩</a></p>
+</li><li id="fn-196" value="196">
+<p>Sauerburger: Right- and Left-Turn-on-Red Laws - <a href="https://sauerburger.org/rtor.html" rel="noopener" target="_blank">sauerburger.org</a>&#160;<a class="footnote-backref" href="#fnref-196" title="Jump back to footnote 196 in the text">↩</a><a class="footnote-backref" href="#fnref2-196" title="Jump back to footnote 196 in the text">↩</a><a class="footnote-backref" href="#fnref3-196" title="Jump back to footnote 196 in the text">↩</a></p>
+</li><li id="fn-197" value="197">
+<p>TRID: The Effect of Right-Turn-on-Red on Pedestrian and Bicyclist Accidents - <a href="https://trid.trb.org/View/194187" rel="noopener" target="_blank">trid.trb.org</a>&#160;<a class="footnote-backref" href="#fnref-197" title="Jump back to footnote 197 in the text">↩</a></p>
+</li><li id="fn-198" value="198">
+<p>Smart Cities Dive: Right turns on red put pedestrians at risk, Mineta study (Jan 27, 2025) - <a href="https://www.smartcitiesdive.com/news/right-turns-on-red-light-put-pedestrians-at-risk-mineta-study/738332/" rel="noopener" target="_blank">smartcitiesdive.com</a>&#160;<a class="footnote-backref" href="#fnref-198" title="Jump back to footnote 198 in the text">↩</a><a class="footnote-backref" href="#fnref2-198" title="Jump back to footnote 198 in the text">↩</a></p>
+</li><li id="fn-199" value="199">
+<p>IIHS: Roundabouts - <a href="https://www.iihs.org/research-areas/roundabouts" rel="noopener" target="_blank">iihs.org</a>&#160;<a class="footnote-backref" href="#fnref-199" title="Jump back to footnote 199 in the text">↩</a><a class="footnote-backref" href="#fnref2-199" title="Jump back to footnote 199 in the text">↩</a><a class="footnote-backref" href="#fnref3-199" title="Jump back to footnote 199 in the text">↩</a><a class="footnote-backref" href="#fnref4-199" title="Jump back to footnote 199 in the text">↩</a></p>
+</li><li id="fn-200" value="200">
+<p>FHWA Resource Center: What is a roundabout? (PDF) - <a href="https://www.fhwa.dot.gov/resourcecenter/teams/safety/teamsafe_rndabout.pdf" rel="noopener" target="_blank">fhwa.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-200" title="Jump back to footnote 200 in the text">↩</a></p>
+</li><li id="fn-201" value="201">
+<p>IIHS: Red light running - <a href="https://www.iihs.org/research-areas/red-light-running" rel="noopener" target="_blank">iihs.org</a>&#160;<a class="footnote-backref" href="#fnref-201" title="Jump back to footnote 201 in the text">↩</a><a class="footnote-backref" href="#fnref2-201" title="Jump back to footnote 201 in the text">↩</a><a class="footnote-backref" href="#fnref3-201" title="Jump back to footnote 201 in the text">↩</a></p>
+</li><li id="fn-202" value="202">
+<p>FHWA: Safety Evaluation of Red-Light Cameras - Executive Summary (FHWA-HRT-05-049) - <a href="https://www.fhwa.dot.gov/publications/research/safety/05049" rel="noopener" target="_blank">fhwa.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-202" title="Jump back to footnote 202 in the text">↩</a></p>
+</li><li id="fn-203" value="203">
+<p>ITE: NTCIP 1202 v04 Actuated Signal Control - <a href="https://www.ite.org/technical-resources/topics/standards/ntcip-1202-v04-actuated-signal-control-asc/" rel="noopener" target="_blank">ite.org</a>&#160;<a class="footnote-backref" href="#fnref-203" title="Jump back to footnote 203 in the text">↩</a><a class="footnote-backref" href="#fnref2-203" title="Jump back to footnote 203 in the text">↩</a></p>
+</li><li id="fn-204" value="204">
+<p>City of Boston: Traffic Management Center Annual Activity Report FY2016 (PDF) - <a href="https://www.boston.gov/sites/default/files/document-file-09-2016/tmc_annual_report_fy2016.pdf" rel="noopener" target="_blank">boston.gov</a>&#160;<a class="footnote-backref" href="#fnref-204" title="Jump back to footnote 204 in the text">↩</a></p>
+</li><li id="fn-205" value="205">
+<p>Boston 25 News: Seaport one step closer to adaptive traffic light system - <a href="https://www.boston25news.com/news/seaport-one-step-closer-to-adaptive-traffic-light-system/685560447/" rel="noopener" target="_blank">boston25news.com</a>&#160;<a class="footnote-backref" href="#fnref-205" title="Jump back to footnote 205 in the text">↩</a></p>
+</li><li id="fn-206" value="206">
+<p>City of Boston: Smart Streets - <a href="https://boston.gov/departments/transportation/smart-streets" rel="noopener" target="_blank">boston.gov</a>&#160;<a class="footnote-backref" href="#fnref-206" title="Jump back to footnote 206 in the text">↩</a></p>
+</li><li id="fn-207" value="207">
+<p>Google: Project Green Light Boston expansion (May 22, 2025) - <a href="https://blog.google/outreach-initiatives/sustainability/project-green-light-boston-expansion/" rel="noopener" target="_blank">blog.google</a>&#160;<a class="footnote-backref" href="#fnref-207" title="Jump back to footnote 207 in the text">↩</a><a class="footnote-backref" href="#fnref2-207" title="Jump back to footnote 207 in the text">↩</a></p>
+</li><li id="fn-208" value="208">
+<p>FHWA: Manual on Uniform Traffic Control Devices home - <a href="https://mutcd.fhwa.dot.gov/index.htm" rel="noopener" target="_blank">mutcd.fhwa.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-208" title="Jump back to footnote 208 in the text">↩</a></p>
+</li><li id="fn-209" value="209">
+<p>GOV.UK: The Highway Code - Light signals controlling traffic - <a href="https://gov.uk/guidance/the-highway-code/light-signals-controlling-traffic" rel="noopener" target="_blank">gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-209" title="Jump back to footnote 209 in the text">↩</a></p>
+</li><li id="fn-210" value="210">
+<p>Mental Floss: Why Does Japan Have Blue Traffic Lights Instead of Green? - <a href="https://www.mentalfloss.com/transportation/why-does-japan-have-blue-traffic-lights-instead-green" rel="noopener" target="_blank">mentalfloss.com</a>&#160;<a class="footnote-backref" href="#fnref-210" title="Jump back to footnote 210 in the text">↩</a><a class="footnote-backref" href="#fnref2-210" title="Jump back to footnote 210 in the text">↩</a></p>
+</li><li id="fn-211" value="211">
+<p>German History in Documents and Images: East German Ampelmännchen - <a href="https://germanhistorydocs.org/en/a-new-germany-1990-2023/east-german-ampelmaennchen" rel="noopener" target="_blank">germanhistorydocs.org</a>&#160;<a class="footnote-backref" href="#fnref-211" title="Jump back to footnote 211 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://dockwatch.cold.fyi">Dockwatch</a> <span>- a Bluebikes dock tracker</span></li><li><a href="https://citations.cold.fyi">Department of Public Courtesy</a> <span>- citations for sidewalk crimes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/primer/"><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/"><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/"><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/" class=on><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("wk-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (tb) tb.textContent = dark ? "Streetlights off" : "Streetlights on";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("wk-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Ancient and medieval": "var(--u-wht)", "Sanitary city (1800s)": "var(--u-grn)", "Networked city (1880-1945)": "var(--u-red)",
+      "Car city (1945-1980)": "var(--u-yel)", "Regulated city (1970-2010)": "var(--u-blu)", "Digital and climate city (2010-now)": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Ancient and medieval","Sanitary city (1800s)","Networked city (1880-1945)","Car city (1945-1980)","Regulated city (1970-2010)","Digital and climate city (2010-now)"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Water: "var(--u-blu)", Sewer: "var(--u-grn)", Power: "var(--u-red)", "Gas and steam": "var(--u-yel)", Light: "var(--u-red)", Traffic: "var(--u-org)",
+      Transit: "var(--u-pur)", Roads: "var(--u-pnk)", Waste: "var(--u-grn)", Streets: "var(--u-pnk)", Emergency: "var(--u-red)", "Data and telecom": "var(--u-org)",
+      Government: "var(--u-wht)", Money: "var(--u-wht)", Rules: "var(--u-pnk)", Climate: "var(--u-blu)", History: "var(--u-wht)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (d.category === "Gas and steam" ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* toolbox */
+  function num(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : NaN; }
+  (function pressure() {
+    if (!$("wp-p")) return;
+    function run() {
+      var p = num("wp-p"), f = Math.floor(num("wp-f")), h = num("wp-h");
+      if (!(p > 0) || !(f >= 1) || !(h > 0)) { $("wp-out").innerHTML = '<p class="warn">Enter a street pressure in psi, a floor number and a floor height.</p>'; return; }
+      var rise = (f - 1) * h, left = p - 0.433 * rise, top = Math.floor((p - 35) / (0.433 * h)) + 1;
+      var zones = Math.max(1, Math.ceil(f / 10));
+      $("wp-out").innerHTML = '<div class="big">' + (left > 0 ? Math.round(left) + " psi" : "No pressure") + "</div>" +
+        "<p>About " + Math.round(rise) + " ft above street level, before pipe friction. " +
+        (left >= 35 ? "Above the 35 psi a top fixture needs." : '<span class="warn">Below the 35 psi a top fixture needs: this floor would need a booster pump or a roof tank.</span>') + "</p>" +
+        "<p>On " + Math.round(p) + " psi alone, water should arrive with useful pressure up to about floor " + Math.max(0, top) + ". A " + f + "-story tower split at about 10 floors per zone would have roughly " + zones + " pressure zone" + (zones > 1 ? "s" : "") + ".</p>";
+    }
+    ["wp-p", "wp-f", "wp-h"].forEach(function (id) { $(id).addEventListener("input", run); }); run();
+  })();
+  (function trash() {
+    if (!$("tr-n")) return;
+    function run() {
+      var n = Math.floor(num("tr-n"));
+      if (!(n >= 1)) { $("tr-out").innerHTML = '<p class="warn">Enter how many people live in the household.</p>'; return; }
+      var lb = n * 4.9 * 365, t = lb / 2000;
+      $("tr-out").innerHTML = '<div class="big">' + Math.round(lb).toLocaleString() + " lb <small>a year (" + (Math.round(t * 10) / 10) + " short tons, " + Math.round(lb * 0.4536).toLocaleString() + " kg)</small></div>" +
+        "<p>At the 2018 national split, about " + Math.round(lb * 0.5).toLocaleString() + " lb would be landfilled, " + Math.round(lb * 0.321).toLocaleString() + " lb recycled or composted and " + Math.round(lb * 0.118).toLocaleString() + " lb burned for energy.</p>" +
+        "<p>This counts all municipal solid waste divided by population, including businesses and institutions, so a real household usually puts out less at the curb.</p>";
+    }
+    $("tr-n").addEventListener("input", run); run();
+  })();
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

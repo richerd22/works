@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gas Mains and Why Steam Comes Out of City Streets | How a City Works</title>
+<meta name="description" content="Natural gas reaches buildings through a network of mains under the street and small service lines to each building, with regulators stepping the pressure...">
+<link rel="canonical" href="https://works.cold.fyi/gas-steam/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b6b3a">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="Gas Mains and Why Steam Comes Out of City Streets | How a City Works"><meta property="og:description" content="Natural gas reaches buildings through a network of mains under the street and small service lines to each building, with regulators stepping the pressure...">
+<meta property="og:url" content="https://works.cold.fyi/gas-steam/"><meta property="og:image" content="https://works.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/overpass-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Gas Mains and Why Steam Comes Out of City Streets", "description": "Natural gas reaches buildings through a network of mains under the street and small service lines to each building, with regulators stepping the pressure...", "url": "https://works.cold.fyi/gas-steam/", "image": "https://works.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "How a City Works", "url": "https://works.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "How a City Works", "item": "https://works.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "Gas under the street, and why steam comes out of it", "item": "https://works.cold.fyi/gas-steam/"}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/overpass-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Overpass';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/overpass-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a public-works field manual - highway guide-sign hero, Overpass (a Highway Gothic descendant) for display, APWA utility-locate colors as section colors, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:light;
+  --bg:#f4f2ec; --panel:#fffdf8; --panel2:#f1eee6; --ink:#17191b; --muted:#5a5a55; --line:#d8d3c7;
+  --tape:#b8480c; --tape-ink:#ffffff; --ink-on:#ffffff; --ink-on-y:#17191b; --hot:#c0281b; --cue:#0a5fb4; --sign:#0b6b3a; --sign-ink:#ffffff;
+  --u-red:#c8261c; --u-yel:#e9b10f; --u-org:#e76a12; --u-blu:#1b63c6; --u-grn:#23884a; --u-pur:#7d45bf; --u-pnk:#d94b8c; --u-wht:#8a877f;
+  --s1:var(--u-blu); --s2:var(--u-grn); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pur);
+  --f-display:"Overpass","Highway Gothic","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-display);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#141617; --panel:#1c1f21; --panel2:#24282a; --ink:#ebe8e1; --muted:#a3a097; --line:#33373a;
+  --tape:#ff7a2e; --tape-ink:#141617; --hot:#ff6a55; --cue:#6db3ff; --sign:#0d7a43; --ink-on:#141617; --ink-on-y:#141617;
+  --u-red:#ff5a4c; --u-yel:#f5c935; --u-org:#ff8a3d; --u-blu:#5aa2ff; --u-grn:#4cc276; --u-pur:#b58cf0; --u-pnk:#ff7fb4; --u-wht:#d8d5cd }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- works.cold.fyi overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:-.01em}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{background:var(--sign);color:var(--sign-ink);border-radius:14px;padding:1.1rem 1.4rem 1.2rem;box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 6px #fff;position:relative;margin:.6rem 0 1.2rem;max-width:44rem}
+.sign .shield{position:absolute;right:1.1rem;top:1rem;font:800 .8rem var(--f-display);background:#fff;color:var(--sign);border-radius:6px;padding:.2rem .45rem;letter-spacing:.04em}
+.sign h1{color:#fff;font-weight:800;font-size:clamp(3rem,11vw,6.6rem);line-height:.9;margin:.2rem 0 .2rem}
+.sign h1 .file{color:#fff}
+.sign .exit{font:700 .9rem var(--f-display);letter-spacing:.02em;opacity:.92;display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.sign .exit b{background:#fff;color:var(--sign);border-radius:4px;padding:.05rem .4rem}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:.95rem;transform:none;clip-path:none;border-radius:6px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.45rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-blu)}.labels li:nth-child(2){--lc:var(--u-red)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-grn)}.labels li:nth-child(5){--lc:var(--u-pur)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.15rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-display);font-weight:800;font-size:.38em;transform:none;clip-path:none;border-radius:5px;color:var(--sci,#fff);background:var(--sc,var(--tape));padding:.22em .45em .12em;vertical-align:.55em}
+.chip-n{color:var(--sci,#fff);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3{font-weight:800}
+.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--sign);color:#fff}
+.seg button[aria-pressed="true"]{color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"],:root[data-theme="dark"] .btn{color:#141617}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"],:root:not([data-theme="light"]) .btn{color:#141617}}
+.gl-list .cat{color:#fff}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .t.wh{fill:#fff}
+.dg .earth{fill:var(--panel2)}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.key{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin:.6rem 0 0;font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.key i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-gas-steam">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">How a City Works</a> / Gas under the street, and why steam comes out of it</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">How a City Works</a></h2><a href="/primer/"><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/"><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/" class=on aria-current=page><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/"><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 07 of 25 · about 8 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-yel);--sci:var(--ink-on-y)"><h1 class="sec-h1" id="sec-gas-steam" style="--sc:var(--u-yel);--sci:var(--ink-on-y)"><span class="tape">07</span>Gas under the street, and why steam comes out of it</h1>
+<p class="short"><strong>The short version:</strong> Natural gas reaches buildings through a network of mains under the street and small service lines to each building, with regulators stepping the pressure down along the way. The gas has no smell, so utilities add a sulfur compound that smells like rotten eggs. Older cities are spending billions to replace leaking cast-iron and bare-steel pipe, and the 2018 Merrimack Valley explosions in Massachusetts showed what happens when a pressure system fails. The steam rising from manholes in New York and Boston is something else: district steam, made at central plants and piped under the street to heat buildings.</p>
+<h3>How does gas get to a building?</h3>
+<p>In outline, natural gas arrives in a city through high-pressure pipelines and is fed into a local distribution system of <strong>gas mains</strong> under the streets. A smaller <strong>service line</strong> runs from the main to each building. Along the way, <strong>regulators</strong> reduce the pressure so that what reaches a stove or furnace is gentle and steady.</p>
+<p>A regulator needs to know the pressure downstream of it, and in many older systems it learns this through a small pipe called a <strong>sensing line</strong> (or control line). If downstream pressure drops, the regulator opens to let more gas through; if pressure rises, it closes. That simple feedback loop is safe as long as the sensing line reads the right pipe. The Merrimack Valley disaster, described below, happened when it did not.<sup id="fnref2-71"><a class="footnote-ref" href="#fn-71">71</a></sup></p>
+<p>According to the US Pipeline and Hazardous Materials Safety Administration (PHMSA), the handoff from transmission pipeline to local system happens at the <strong>city gate</strong>, where the pressure is lowered and a sour-smelling odorant is added.<sup id="fnref-156"><a class="footnote-ref" href="#fn-156">156</a></sup> From there, gas typically reaches distribution mains from a high-pressure source through a <strong>regulator station</strong> that lowers the pressure again.<sup id="fnref-157"><a class="footnote-ref" href="#fn-157">157</a></sup> In the Merrimack Valley system described below, 14 regulator stations each used two regulators in series, a "worker" and a backup "monitor."<sup id="fnref2-157"><a class="footnote-ref" href="#fn-157">157</a></sup></p>
+<h3>What does a gas leak smell like?</h3>
+<p>Natural gas has no smell of its own. Utilities add <strong>mercaptan</strong>, a sulfur compound with a "rotten egg" smell, so that people notice leaks.<sup id="fnref-158"><a class="footnote-ref" href="#fn-158">158</a></sup> The standard advice is the same everywhere: if you smell gas, leave the building and call the utility or emergency services from a safe place.<sup id="fnref2-158"><a class="footnote-ref" href="#fn-158">158</a></sup> The order matters because a light switch, a phone or a doorbell inside can make the spark that ignites gas, so the call waits until you are outside.</p>
+<h3>What is leak-prone pipe?</h3>
+<p>Much of the gas pipe under older American cities is cast iron or bare steel, which utilities and regulators call <strong>leak-prone pipe</strong>. Cast iron is brittle and can crack as the ground shifts and freezes, and steel without corrosion protection can rust through.</p>
+<p>Massachusetts set up a formal program to replace it. A 2014 gas leaks law created the Gas System Enhancement Plan (GSEP), which lets utilities recover the cost of replacing leak-prone pipe through customers' bills.<sup id="fnref-79"><a class="footnote-ref" href="#fn-79">79</a></sup> The price has climbed fast. The cost per mile replaced rose from $1.32 million in 2015 to $3.46 million in 2025.<sup id="fnref2-79"><a class="footnote-ref" href="#fn-79">79</a></sup> As of 2025, 4,049 miles (6,500 km) of leak-prone pipe remained in the state, and finishing the job by replacement alone would cost an estimated $13.7 billion more.<sup id="fnref3-79"><a class="footnote-ref" href="#fn-79">79</a></sup></p>
+<p>In May 2025 the state Department of Public Utilities (DPU) cut the cap on how much GSEP can add to revenue, from 3% toward 1.5% by 2027, and told utilities to consider repairs and <strong>non-pipeline alternatives</strong> instead of automatically replacing every old main.<sup id="fnref4-79"><a class="footnote-ref" href="#fn-79">79</a></sup> Massachusetts had about 1.7 million gas customers in 2019, 91% of them served by National Grid or Eversource.<sup id="fnref5-79"><a class="footnote-ref" href="#fn-79">79</a></sup></p>
+<p>The debate behind those numbers runs like this. Replacing old pipe makes the current system safer and reduces leaks of methane, a potent greenhouse gas. But the state is also pushing buildings to switch to electric heat. A new main is expected to last for decades, and if fewer customers use gas over that time, the remaining ones may end up paying for pipes that carry less and less. Utilities, regulators, climate groups and ratepayer advocates weigh those two goals differently.</p>
+<h3>What happened in the Merrimack Valley in 2018?</h3>
+<p>At about 4 p.m. on September 13, 2018, high-pressure gas poured into the low-pressure distribution system serving Lawrence, Andover and North Andover, Massachusetts, north of Boston.<sup id="fnref3-70"><a class="footnote-ref" href="#fn-70">70</a></sup> Fires and explosions damaged 131 structures and destroyed at least five homes. One person was killed and 22 people were taken to hospitals, including three firefighters.<sup id="fnref4-70"><a class="footnote-ref" href="#fn-70">70</a></sup> Columbia Gas of Massachusetts shut down the low-pressure system, cutting off 10,894 customers.<sup id="fnref5-70"><a class="footnote-ref" href="#fn-70">70</a></sup></p>
+<p>The US National Transportation Safety Board (NTSB) traced the cause to a pipe-replacement job. A crew working for Columbia Gas, which was owned by NiSource, was replacing an old cast-iron main. They abandoned the old main while the sensing lines for the area's regulators were still attached to it.<sup id="fnref6-70"><a class="footnote-ref" href="#fn-70">70</a></sup> With the old pipe out of service, the sensing lines read falling pressure, and the regulators did what they were designed to do: they opened fully, sending high-pressure gas into the neighborhood system.<sup id="fnref3-71"><a class="footnote-ref" href="#fn-71">71</a></sup> The work package "did not account for the location of the sensing lines."<sup id="fnref2-86"><a class="footnote-ref" href="#fn-86">86</a></sup> Columbia Gas' monitoring center in Columbus, Ohio, received the high-pressure alarms.<sup id="fnref3-86"><a class="footnote-ref" href="#fn-86">86</a></sup></p>
+<p>On September 24, 2019, the NTSB determined the probable cause: weak engineering management and oversight by Columbia Gas, and a low-pressure system without adequate overpressure protection.<sup id="fnref4-71"><a class="footnote-ref" href="#fn-71">71</a></sup> The board called systems that rely only on sensing lines and regulators "not optimal" and found NiSource's engineering risk management deficient.<sup id="fnref7-70"><a class="footnote-ref" href="#fn-70">70</a></sup></p>
+<p>Our reading: the disaster happened during work meant to make the system safer, which is a reminder that replacing old pipe carries risks of its own and depends on accurate records of what is connected to what.</p>
+<p>The person killed was Leonel Rondon, 18.<sup id="fnref-159"><a class="footnote-ref" href="#fn-159">159</a></sup> According to PHMSA, the low-pressure system was meant to run at 0.5 pounds per square inch (psi), about 12 inches of water column, and its regulator stations stepped gas down from roughly 75 psi.<sup id="fnref3-157"><a class="footnote-ref" href="#fn-157">157</a></sup></p>
+<h3>Why does steam come out of the street?</h3>
+<p>In Manhattan, and on a smaller scale in Boston, the white plumes rising from manholes and from tall orange-and-white striped tubes are usually not a gas leak or a sewer problem. They come from <strong>district steam</strong>: steam made at central plants and piped under the streets to heat many buildings.</p>
+<p>New York's system is among the oldest and largest in the US. The New York Steam Company began service on March 3, 1882, and merged into Con Edison in 1954.<sup id="fnref-160"><a class="footnote-ref" href="#fn-160">160</a></sup> Today Con Ed's steam system has about 105 miles (169 km) of mains running from 96th Street to Battery Park and serves about 1,500 customers.<sup id="fnref-161"><a class="footnote-ref" href="#fn-161">161</a></sup> About 27 billion pounds of steam flow through it each year.<sup id="fnref2-160"><a class="footnote-ref" href="#fn-160">160</a></sup></p>
+<p>The visible vapor has two usual sources. Groundwater or rainwater that touches a hot steam pipe boils off, and small leaks in the pipes themselves release steam.<sup id="fnref3-160"><a class="footnote-ref" href="#fn-160">160</a></sup> Con Ed vents that vapor through 10-foot (3 m) orange-and-white stacks placed over manholes, so it rises above pedestrians and drivers instead of blinding them at street level.<sup id="fnref4-160"><a class="footnote-ref" href="#fn-160">160</a></sup></p>
+<p>The pipes can also fail badly. Steam pipe explosions hit Midtown Manhattan in 2007 and the Flatiron District in 2018, when dozens of buildings were evacuated (Wikipedia gives both 49 and 28).<sup id="fnref5-160"><a class="footnote-ref" href="#fn-160">160</a></sup></p>
+<p>Steam does more than heat. In New York, Con Ed steam is used in restaurant kitchens and to power absorption chillers for air conditioning.<sup id="fnref-162"><a class="footnote-ref" href="#fn-162">162</a></sup> US district energy supplier Vicinity Energy says hospitals on its systems use steam for sterilization and humidification.<sup id="fnref-163"><a class="footnote-ref" href="#fn-163">163</a></sup> Steam systems like New York's belong to the first generation of district heating, introduced in the US in the 1880s; later generations, starting in the 1930s, switched to pressurized hot water, and the common heat carrier today is water rather than steam.<sup id="fnref2-162"><a class="footnote-ref" href="#fn-162">162</a></sup></p>
+<h3>In Boston</h3>
+<p><strong>Gas.</strong> Boston's gas history begins with light. The Boston Gas Light Company was chartered on January 22, 1823, and the city's first public gas street lamp was lit in Dock Square, near Faneuil Hall, on January 1, 1829.<sup id="fnref-164"><a class="footnote-ref" href="#fn-164">164</a></sup> Today the city's gas customers are part of the Massachusetts system described above, where National Grid and Eversource serve most of the state's roughly 1.7 million gas customers and the GSEP program pays to replace leak-prone mains.<sup id="fnref6-79"><a class="footnote-ref" href="#fn-79">79</a></sup> The city still burns gas in about 2,800 street lamps; that story is in <a href="/streetlights/">How streetlights work</a>.</p>
+<p><strong>Steam.</strong> Boston and Cambridge share a district steam system now run by Vicinity Energy. Vicinity says it has served Boston for "over 90 years."<sup id="fnref2-97"><a class="footnote-ref" href="#fn-97">97</a></sup> The system's size depends on which source you read, and they disagree:</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Pipe</th>
+<th>Floor area served</th>
+<th>Buildings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canary Media (November 2025)</td>
+<td>about 25 miles</td>
+<td>about 70 million sq ft</td>
+<td>not given</td>
+</tr>
+<tr>
+<td>Vicinity Energy's Boston page</td>
+<td>29 or 10 miles</td>
+<td>71.4 million sq ft</td>
+<td>245 or 51</td>
+</tr>
+</tbody>
+</table></div>
+<p>Vicinity's own page gives both sets of pipe and building figures.<sup id="fnref3-97"><a class="footnote-ref" href="#fn-97">97</a></sup> The larger numbers may describe Boston and the smaller ones Cambridge, but the page does not say so. Canary's figures come from its reporting on the system.<sup id="fnref-55"><a class="footnote-ref" href="#fn-55">55</a></sup> Either way, roughly 70 million square feet (6.5 million square meters) of buildings take heat from these pipes.</p>
+<p>Much of that steam has come from the Kendall Cogeneration Station in Cambridge, a plant about 75 years old.<sup id="fnref2-55"><a class="footnote-ref" href="#fn-55">55</a></sup> Emerson College and the life-science developer IQHQ have committed to buying its lower-carbon steam.<sup id="fnref3-55"><a class="footnote-ref" href="#fn-55">55</a></sup></p>
+<h3>How it changed</h3>
+<p>Gas networks were built first for light, not heat. In London the Gas Light and Coke Company, the world's first gas company, received a royal charter in 1812, and by the 1820s London had about 50,000 gas lamps fed by roughly 300 miles of pipe.<sup id="fnref-165"><a class="footnote-ref" href="#fn-165">165</a></sup> Boston followed with its 1823 charter and 1829 Dock Square lamp, but grew slowly: by 1839 it had only about 180 gas street lamps.<sup id="fnref2-164"><a class="footnote-ref" href="#fn-164">164</a></sup></p>
+<p>District steam arrived in the 1880s with the New York Steam Company in 1882.<sup id="fnref6-160"><a class="footnote-ref" href="#fn-160">160</a></sup></p>
+<p>The modern regulatory era in Massachusetts runs through two events: the 2014 gas leaks law that created GSEP,<sup id="fnref7-79"><a class="footnote-ref" href="#fn-79">79</a></sup> and the 2018 Merrimack Valley explosions, followed by the NTSB's 2019 finding on cause.<sup id="fnref5-71"><a class="footnote-ref" href="#fn-71">71</a></sup></p>
+<h3>What's changing now (2026)</h3>
+<p><strong>Gas: replace, repair or retire.</strong> Massachusetts regulators are no longer assuming that every old main should be replaced with a new one. The DPU's May 2025 order lowering the GSEP cap and pressing utilities to consider repairs and non-pipeline alternatives reflects the rising cost of replacement - $3.46 million a mile in 2025 - and the $13.7 billion still needed to finish.<sup id="fnref8-79"><a class="footnote-ref" href="#fn-79">79</a></sup> That leaves a question for the next decade: how much to spend on a gas network that the state's climate policies aim to shrink.</p>
+<p><strong>Steam: moving to electricity.</strong> Both big US steam systems are trying to stop burning so much fuel.</p>
+<ul>
+<li>In Boston and Cambridge, Vicinity finished a 42 MW electric boiler at Kendall in 2024 and is selling what it calls <strong>eSteam</strong>, steam made with electricity rather than by burning fuel on site.<sup id="fnref8-55"><a class="footnote-ref" href="#fn-55">55</a></sup><sup id="fnref4-97"><a class="footnote-ref" href="#fn-97">97</a></sup> It has begun building a 35 MW heat pump that will draw heat from the Charles River, expected in mid-2028.<sup id="fnref9-55"><a class="footnote-ref" href="#fn-55">55</a></sup><sup id="fnref5-97"><a class="footnote-ref" href="#fn-97">97</a></sup></li>
+<li>In New York, Con Ed says direct emissions from its steam system are down 60% since 2005, and it is piloting heat pumps, electric boilers and thermal storage, aiming for measurable emissions cuts around 2035.<sup id="fnref2-161"><a class="footnote-ref" href="#fn-161">161</a></sup></li>
+</ul>
+<p>Electric steam shifts the emissions question onto the power grid (see <a href="/power/">How electricity gets to your building</a>). A 42 MW boiler is a large new load on a grid that is also absorbing heat pumps and electric cars.</p>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=How%20a%20City%20Works%20correction%3A%20Gas%20under%20the%20street%2C%20and%20why%20steam%20comes%20out%20of%20it">Report an error in this section</a></p></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/power/"><span>Previous · 06</span>How electricity gets to your building</a><a class="next" href="/streetlights/"><span>Next · 08</span>How streetlights work, from gas lamps to LEDs</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">16 of the guide's 379 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-55" value="55">
+<p>Canary Media: Boston&#x27;s century-old steam heat system is getting a low-carbon makeover - <a href="https://www.canarymedia.com/articles/clean-industry/bostons-century-old-steam-heat-system-is-getting-a-low-carbon-makeover" rel="noopener" target="_blank">canarymedia.com</a>&#160;<a class="footnote-backref" href="#fnref-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref2-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref3-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref4-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref5-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref6-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref7-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref8-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref9-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref10-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref11-55" title="Jump back to footnote 55 in the text">↩</a><a class="footnote-backref" href="#fnref12-55" title="Jump back to footnote 55 in the text">↩</a></p>
+</li><li id="fn-70" value="70">
+<p>NTSB: Pipeline Accident Report PAR-19/02 abstract - <a href="https://www.ntsb.gov:443/news/events/Documents/2019-PLD18MR003-BMG-abstract.pdf" rel="noopener" target="_blank">ntsb.gov:443</a>&#160;<a class="footnote-backref" href="#fnref-70" title="Jump back to footnote 70 in the text">↩</a><a class="footnote-backref" href="#fnref2-70" title="Jump back to footnote 70 in the text">↩</a><a class="footnote-backref" href="#fnref3-70" title="Jump back to footnote 70 in the text">↩</a><a class="footnote-backref" href="#fnref4-70" title="Jump back to footnote 70 in the text">↩</a><a class="footnote-backref" href="#fnref5-70" title="Jump back to footnote 70 in the text">↩</a><a class="footnote-backref" href="#fnref6-70" title="Jump back to footnote 70 in the text">↩</a><a class="footnote-backref" href="#fnref7-70" title="Jump back to footnote 70 in the text">↩</a></p>
+</li><li id="fn-71" value="71">
+<p>NTSB: Overpressurized Gas Distribution System Caused Explosions, Fires - <a href="https://www-s.ntsb.gov/news/press-releases/Pages/NR20190924.aspx" rel="noopener" target="_blank">www-s.ntsb.gov</a>&#160;<a class="footnote-backref" href="#fnref-71" title="Jump back to footnote 71 in the text">↩</a><a class="footnote-backref" href="#fnref2-71" title="Jump back to footnote 71 in the text">↩</a><a class="footnote-backref" href="#fnref3-71" title="Jump back to footnote 71 in the text">↩</a><a class="footnote-backref" href="#fnref4-71" title="Jump back to footnote 71 in the text">↩</a><a class="footnote-backref" href="#fnref5-71" title="Jump back to footnote 71 in the text">↩</a><a class="footnote-backref" href="#fnref6-71" title="Jump back to footnote 71 in the text">↩</a><a class="footnote-backref" href="#fnref7-71" title="Jump back to footnote 71 in the text">↩</a></p>
+</li><li id="fn-79" value="79">
+<p>Athol Daily News / State House News Service: DPU confronts utilities on gas pipe replacement - <a href="https://atholdailynews.com/2025/05/02/dpu-confronts-utilities-on-gas-pipe-replacement-60968273/" rel="noopener" target="_blank">atholdailynews.com</a>&#160;<a class="footnote-backref" href="#fnref-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref2-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref3-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref4-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref5-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref6-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref7-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref8-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref9-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref10-79" title="Jump back to footnote 79 in the text">↩</a><a class="footnote-backref" href="#fnref11-79" title="Jump back to footnote 79 in the text">↩</a></p>
+</li><li id="fn-86" value="86">
+<p>GBH News: NTSB confirms overpressurized pipes, faults Columbia Gas in Merrimack Valley explosions - <a href="https://wgbh.org/news/local/2018-10-11/ntsb-confirms-overpressurized-pipes-faults-columbia-gas-in-merrimack-valley-explosions" rel="noopener" target="_blank">wgbh.org</a>&#160;<a class="footnote-backref" href="#fnref-86" title="Jump back to footnote 86 in the text">↩</a><a class="footnote-backref" href="#fnref2-86" title="Jump back to footnote 86 in the text">↩</a><a class="footnote-backref" href="#fnref3-86" title="Jump back to footnote 86 in the text">↩</a><a class="footnote-backref" href="#fnref4-86" title="Jump back to footnote 86 in the text">↩</a></p>
+</li><li id="fn-97" value="97">
+<p>Vicinity Energy: Boston - <a href="https://www.vicinityenergy.us/locations/boston/" rel="noopener" target="_blank">vicinityenergy.us</a>&#160;<a class="footnote-backref" href="#fnref-97" title="Jump back to footnote 97 in the text">↩</a><a class="footnote-backref" href="#fnref2-97" title="Jump back to footnote 97 in the text">↩</a><a class="footnote-backref" href="#fnref3-97" title="Jump back to footnote 97 in the text">↩</a><a class="footnote-backref" href="#fnref4-97" title="Jump back to footnote 97 in the text">↩</a><a class="footnote-backref" href="#fnref5-97" title="Jump back to footnote 97 in the text">↩</a></p>
+</li><li id="fn-156" value="156">
+<p>PHMSA: Fact Sheet: Distribution Pipelines - <a href="https://primis.phmsa.dot.gov/stakeholder-comms/factsheets/fsdistributionpipelines" rel="noopener" target="_blank">primis.phmsa.dot.gov</a>&#160;<a class="footnote-backref" href="#fnref-156" title="Jump back to footnote 156 in the text">↩</a></p>
+</li><li id="fn-157" value="157">
+<p>Federal Register (PHMSA): Pipeline Safety: Overpressure Protection on Low-Pressure Natural Gas Distribution Systems (September 29, 2020) - <a href="https://regulations.justia.com/regulations/fedreg/2020/09/29/2020-21508.html" rel="noopener" target="_blank">regulations.justia.com</a>&#160;<a class="footnote-backref" href="#fnref-157" title="Jump back to footnote 157 in the text">↩</a><a class="footnote-backref" href="#fnref2-157" title="Jump back to footnote 157 in the text">↩</a><a class="footnote-backref" href="#fnref3-157" title="Jump back to footnote 157 in the text">↩</a></p>
+</li><li id="fn-158" value="158">
+<p>Wisconsin Public Service: News release on natural gas odorant - <a href="https://news.wisconsinpublicservice.com/?p=264" rel="noopener" target="_blank">news.wisconsinpublicservice.com</a>&#160;<a class="footnote-backref" href="#fnref-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref2-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref3-158" title="Jump back to footnote 158 in the text">↩</a></p>
+</li><li id="fn-159" value="159">
+<p>WBUR: Faulty pipe work caused Lawrence, Andover gas explosions, report says - <a href="https://www.wbur.org/news/2018/10/11/faulty-pipe-work-caused-lawrence-andover-gas-explosions-report" rel="noopener" target="_blank">wbur.org</a>&#160;<a class="footnote-backref" href="#fnref-159" title="Jump back to footnote 159 in the text">↩</a></p>
+</li><li id="fn-160" value="160">
+<p>Wikipedia: New York City steam system - <a href="https://en.wikipedia.org/wiki/New_York_City_steam_system" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-160" title="Jump back to footnote 160 in the text">↩</a><a class="footnote-backref" href="#fnref2-160" title="Jump back to footnote 160 in the text">↩</a><a class="footnote-backref" href="#fnref3-160" title="Jump back to footnote 160 in the text">↩</a><a class="footnote-backref" href="#fnref4-160" title="Jump back to footnote 160 in the text">↩</a><a class="footnote-backref" href="#fnref5-160" title="Jump back to footnote 160 in the text">↩</a><a class="footnote-backref" href="#fnref6-160" title="Jump back to footnote 160 in the text">↩</a></p>
+</li><li id="fn-161" value="161">
+<p>International District Energy Association: Driving decarbonization through district steam - <a href="https://www.districtenergy.org/blogs/district-energy/2025/06/11/driving-decarbonization-through-district-steam-con" rel="noopener" target="_blank">districtenergy.org</a>&#160;<a class="footnote-backref" href="#fnref-161" title="Jump back to footnote 161 in the text">↩</a><a class="footnote-backref" href="#fnref2-161" title="Jump back to footnote 161 in the text">↩</a></p>
+</li><li id="fn-162" value="162">
+<p>Wikipedia: District heating - <a href="https://en.wikipedia.org/wiki/District_heating" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-162" title="Jump back to footnote 162 in the text">↩</a><a class="footnote-backref" href="#fnref2-162" title="Jump back to footnote 162 in the text">↩</a></p>
+</li><li id="fn-163" value="163">
+<p>Vicinity Energy: Powering healthcare facilities with district energy - <a href="https://www.vicinityenergy.us/blog/powering-healthcare-facilities-with-district-energy/" rel="noopener" target="_blank">vicinityenergy.us</a>&#160;<a class="footnote-backref" href="#fnref-163" title="Jump back to footnote 163 in the text">↩</a></p>
+</li><li id="fn-164" value="164">
+<p>New England Historical Society: New England&#x27;s First Gas Light Company - <a href="https://newenglandhistoricalsociety.com/first-gas-light-company/" rel="noopener" target="_blank">newenglandhistoricalsociety.com</a>&#160;<a class="footnote-backref" href="#fnref-164" title="Jump back to footnote 164 in the text">↩</a><a class="footnote-backref" href="#fnref2-164" title="Jump back to footnote 164 in the text">↩</a><a class="footnote-backref" href="#fnref3-164" title="Jump back to footnote 164 in the text">↩</a><a class="footnote-backref" href="#fnref4-164" title="Jump back to footnote 164 in the text">↩</a></p>
+</li><li id="fn-165" value="165">
+<p>London Museum: Gas lamps illuminated London - <a href="https://www.londonmuseum.org.uk/collections/london-stories/gas-lamps-illuminated-london/" rel="noopener" target="_blank">londonmuseum.org.uk</a>&#160;<a class="footnote-backref" href="#fnref-165" title="Jump back to footnote 165 in the text">↩</a><a class="footnote-backref" href="#fnref2-165" title="Jump back to footnote 165 in the text">↩</a><a class="footnote-backref" href="#fnref3-165" title="Jump back to footnote 165 in the text">↩</a><a class="footnote-backref" href="#fnref4-165" title="Jump back to footnote 165 in the text">↩</a><a class="footnote-backref" href="#fnref5-165" title="Jump back to footnote 165 in the text">↩</a><a class="footnote-backref" href="#fnref6-165" title="Jump back to footnote 165 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://dockwatch.cold.fyi">Dockwatch</a> <span>- a Bluebikes dock tracker</span></li><li><a href="https://citations.cold.fyi">Department of Public Courtesy</a> <span>- citations for sidewalk crimes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/primer/"><span class="n">01</span>How cities came to need infrastructure</a><a href="/machine/"><span class="n">02</span>A city is one machine</a><a href="/water/"><span class="n">03</span>Where your tap water comes from</a><a href="/tall-buildings/"><span class="n">04</span>Why water reaches the 40th floor</a><a href="/sewers/"><span class="n">05</span>Where it goes after you flush (or it rains)</a><a href="/power/"><span class="n">06</span>How electricity gets to your building</a><a href="/gas-steam/" class=on><span class="n">07</span>Gas under the street, and why steam comes out of it</a><a href="/streetlights/"><span class="n">08</span>How streetlights work, from gas lamps to LEDs</a><a href="/traffic-lights/"><span class="n">09</span>How traffic lights work</a><a href="/transit/"><span class="n">10</span>How the subway and the bus actually run</a><a href="/roads/"><span class="n">11</span>Roads, bridges, tunnels and the hole in your street</a><a href="/trash/"><span class="n">12</span>Where your trash actually goes</a><a href="/streets/"><span class="n">13</span>Keeping streets clean and open</a><a href="/911/"><span class="n">14</span>From fire alarm boxes to 911</a><a href="/311/"><span class="n">15</span>311, the wires under the street, and city data</a><a href="/who-runs-it/"><span class="n">16</span>Who actually runs a city</a><a href="/money/"><span class="n">17</span>Who pays for the city</a><a href="/rules/"><span class="n">18</span>The rules for building in a city</a><a href="/climate/"><span class="n">19</span>How cities are adapting to a changing climate</a><a href="/one-block/"><span class="n">20</span>One Boston block, 24 hours</a><a href="/toolbox/"><span class="n">21</span>The toolbox</a><a href="/glossary/"><span class="n">22</span>The glossary</a><a href="/next/"><span class="n">23</span>Where to go next</a><a href="/open/"><span class="n">24</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">25</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("wk-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (tb) tb.textContent = dark ? "Streetlights off" : "Streetlights on";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("wk-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Ancient and medieval": "var(--u-wht)", "Sanitary city (1800s)": "var(--u-grn)", "Networked city (1880-1945)": "var(--u-red)",
+      "Car city (1945-1980)": "var(--u-yel)", "Regulated city (1970-2010)": "var(--u-blu)", "Digital and climate city (2010-now)": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Ancient and medieval","Sanitary city (1800s)","Networked city (1880-1945)","Car city (1945-1980)","Regulated city (1970-2010)","Digital and climate city (2010-now)"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Water: "var(--u-blu)", Sewer: "var(--u-grn)", Power: "var(--u-red)", "Gas and steam": "var(--u-yel)", Light: "var(--u-red)", Traffic: "var(--u-org)",
+      Transit: "var(--u-pur)", Roads: "var(--u-pnk)", Waste: "var(--u-grn)", Streets: "var(--u-pnk)", Emergency: "var(--u-red)", "Data and telecom": "var(--u-org)",
+      Government: "var(--u-wht)", Money: "var(--u-wht)", Rules: "var(--u-pnk)", Climate: "var(--u-blu)", History: "var(--u-wht)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (d.category === "Gas and steam" ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* toolbox */
+  function num(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : NaN; }
+  (function pressure() {
+    if (!$("wp-p")) return;
+    function run() {
+      var p = num("wp-p"), f = Math.floor(num("wp-f")), h = num("wp-h");
+      if (!(p > 0) || !(f >= 1) || !(h > 0)) { $("wp-out").innerHTML = '<p class="warn">Enter a street pressure in psi, a floor number and a floor height.</p>'; return; }
+      var rise = (f - 1) * h, left = p - 0.433 * rise, top = Math.floor((p - 35) / (0.433 * h)) + 1;
+      var zones = Math.max(1, Math.ceil(f / 10));
+      $("wp-out").innerHTML = '<div class="big">' + (left > 0 ? Math.round(left) + " psi" : "No pressure") + "</div>" +
+        "<p>About " + Math.round(rise) + " ft above street level, before pipe friction. " +
+        (left >= 35 ? "Above the 35 psi a top fixture needs." : '<span class="warn">Below the 35 psi a top fixture needs: this floor would need a booster pump or a roof tank.</span>') + "</p>" +
+        "<p>On " + Math.round(p) + " psi alone, water should arrive with useful pressure up to about floor " + Math.max(0, top) + ". A " + f + "-story tower split at about 10 floors per zone would have roughly " + zones + " pressure zone" + (zones > 1 ? "s" : "") + ".</p>";
+    }
+    ["wp-p", "wp-f", "wp-h"].forEach(function (id) { $(id).addEventListener("input", run); }); run();
+  })();
+  (function trash() {
+    if (!$("tr-n")) return;
+    function run() {
+      var n = Math.floor(num("tr-n"));
+      if (!(n >= 1)) { $("tr-out").innerHTML = '<p class="warn">Enter how many people live in the household.</p>'; return; }
+      var lb = n * 4.9 * 365, t = lb / 2000;
+      $("tr-out").innerHTML = '<div class="big">' + Math.round(lb).toLocaleString() + " lb <small>a year (" + (Math.round(t * 10) / 10) + " short tons, " + Math.round(lb * 0.4536).toLocaleString() + " kg)</small></div>" +
+        "<p>At the 2018 national split, about " + Math.round(lb * 0.5).toLocaleString() + " lb would be landfilled, " + Math.round(lb * 0.321).toLocaleString() + " lb recycled or composted and " + Math.round(lb * 0.118).toLocaleString() + " lb burned for energy.</p>" +
+        "<p>This counts all municipal solid waste divided by population, including businesses and institutions, so a real household usually puts out less at the curb.</p>";
+    }
+    $("tr-n").addEventListener("input", run); run();
+  })();
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>
