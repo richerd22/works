@@ -371,6 +371,22 @@ article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-display);font-weigh
 .gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
 .gaplist li{margin-bottom:.35rem}
 
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+
 </style>
 </head>
 <body><div class="wrap"><div class="mast"><span><a href="/">How a City Works</a></span></div><header class="hero"><div class="sign"><span class="shield">404</span><h1><span>Road</span><span class="file">Closed</span></h1><div class="exit"><b>DETOUR</b>This page is under construction, or it never existed.</div></div><p class="dek"><a href="/">Back to the guide</a>.</p></header></div></body></html>
